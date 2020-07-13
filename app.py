@@ -1,19 +1,17 @@
 from configparser import ConfigParser
 from flask import Flask, jsonify, request
-import pymongo
+from flask.ext.pymongo import PyMongo
 
 # Create an instance of class, first argument is name of application
 app = Flask(__name__)
 
 # Read Creadential File
-# config = ConfigParser()
-# config.read('config.ini')
+config = ConfigParser()
+config.read('config.ini')
 
-URL = 'mongodb://127.0.0.1:27017' # add db url
-client = pymongo.MongoClient(URL)
+URL = config.get('MongoDB', 'URL') # add db url
+client = pymongo.MongoClient()
 db = client.Tutorial5
-# INTERVAL = config.get('DEFAULT', 'TimeIntervals', fallback=0.1)
-# AWS_ACCESS_KEY_ID = config.get('AWS', 'AWS_ACCESS_KEY_ID')
 
 @app.route("/", methods=["GET"])
 @app.route("/users", methods=["GET"])
