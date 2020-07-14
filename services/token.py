@@ -1,5 +1,6 @@
 import jwt
 import datetime
+from os import environ
 
 def encode_jwt(user_id: str) -> bytes:
     """
@@ -16,7 +17,7 @@ def encode_jwt(user_id: str) -> bytes:
         }
         return jwt.encode(
             payload,
-            'rentalvista-key',
+            environ.get('SECRET_KEY'),
             algorithm='HS256'
         )
     except Exception as e:
@@ -30,7 +31,7 @@ def decode_jwt(auth_token: str) -> str:
     :return: integer|string
     """
     try:
-        payload = jwt.decode(auth_token, 'rentalvista-key')
+        payload = jwt.decode(auth_token, environ.get('SECRET_KEY'))
         return payload['sub']
     except jwt.ExpiredSignatureError:
         return 'Signature expired. Please log in again.'
