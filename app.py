@@ -21,7 +21,7 @@ mail = Mail(app)
 CORS(app)
 bcrypt = Bcrypt(app)
 
-URI = environ.get('URI') # add db url
+URI = URI = environ.get('MONGODB_URI_PART1') + '&' + environ.get('MONGODB_URI_PART1') # add db url
 client = MongoClient(URI)
 database = client.rentalvista
 
