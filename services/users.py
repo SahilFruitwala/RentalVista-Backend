@@ -70,3 +70,6 @@ def get_user_detail(token: str, user):
         return jsonify(data)
     except Exception as e:
         return "Error!"
+
+def logout_user(token: str, user, deniedToken) -> str:
+    pass

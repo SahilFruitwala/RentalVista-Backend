@@ -4,8 +4,11 @@ from flask_mail import Mail
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
-from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail
 import json
+
+from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
+from services.token import decode_jwt
+
 
 app = Flask(__name__)
 
@@ -24,6 +27,22 @@ bcrypt = Bcrypt(app)
 MONGODB_URI = os.environ.get('MONGODB_URI_PART1') # add db url
 client = MongoClient(MONGODB_URI + '&w=majority')
 database = client.rentalvista
+
+def authentication(auth):
+    @wraps(auth)
+    def token_auth(*args, **kwargs):
+        token = request.headers['Authorization']
+
+        if not token:
+            return jsonify({"msg": "Please Login First!"}), 403
+        
+        token_data = decode_jwt(token)
+        if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
+            return jsonify({"msg": "Please Login First!"}), 403
+        
+        return auth(*args, **kwargs)
+
+    return  token_auth
 
 @app.route("/users/signup", methods=["POST"])
 def signup():
@@ -45,6 +64,7 @@ def forgot():
     return forgot_password(data['email'], user, mail, bcrypt)
 
 @app.route("/users/change", methods=["POST"])
+@authentication
 def change():
     token = request.headers['Authorization']
     user = database.user
@@ -52,18 +72,35 @@ def change():
     return change_password(token, data['password'], data['new_password'], user, bcrypt)
 
 @app.route("/users/user", methods=["POST"])
+@authentication
 def user_detail():
     token = request.headers['Authorization']
     user = database.user
     return get_user_detail(token, user)
 
 @app.route("/users/edit", methods=["POST"])
+@authentication
 def edit():
     token = request.headers['Authorization']
     user = database.user
     data = request.json
     return edit_profile(token, data['name'], data['contact'], user)
 
+@app.route("/users/logout", methods=["POST"])
+@authentication
+def logout():
+    token = request.headers['Authorization']
+    user = database.user
+    deniedToken = database.deniedTokens
+    return logout(token, user, deniedToken)
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
+
+
+# TODO: 0. Create a logout method 
+# TODO: 1. Create a deniedTokens tokens 
+# TODO: 2. on logout add token to deniedTokens 
+# TODO: 3. on logout clear token from user 
+# TODO: 3. check token if token is in deniedTokens or not for services which needs authentication
