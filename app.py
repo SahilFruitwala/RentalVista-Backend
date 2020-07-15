@@ -98,9 +98,8 @@ def logout():
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
 
-
-# TODO: 0. Create a logout method 
-# TODO: 1. Create a deniedTokens tokens 
-# TODO: 2. on logout add token to deniedTokens 
-# TODO: 3. on logout clear token from user 
+# !Done TODO: 0. Create a logout method
+# !Done TODO: 1. Create a deniedTokens tokens 
+# !Done TODO: 2. on logout add token to deniedTokens 
+# !Done TODO: 3. on logout clear token from user 
 # TODO: 3. check token if token is in deniedTokens or not for services which needs authentication

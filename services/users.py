@@ -2,6 +2,7 @@ from .token import encode_jwt, decode_jwt
 from flask import flash, jsonify
 from flask_mail import Message
 from .password_generator import generate_random_pass
+from datetime import datetime
 
 
 def register_user(name: str, email: str, password: str, contact:str, user, bcrypt) -> str:
@@ -72,4 +73,10 @@ def get_user_detail(token: str, user):
         return "Error!"
 
 def logout_user(token: str, user, deniedToken) -> str:
-    pass
+    token_data = decode_jwt(token)
+    try:
+        user.update_one({"_id" : token_data},{'$set': { "token" : ""}})
+        deniedToken.insert_one({"token": token, "denied_time": str(datetime.now())}).inserted_id
+    except:
+        return "Some Internal Error Occurred!"
+    return jsonify({"msg": "Logout Success!"})
