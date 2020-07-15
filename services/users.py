@@ -1,9 +1,8 @@
 from .token import encode_jwt, decode_jwt
-from flask import flash
+from flask import flash, jsonify
 from flask_mail import Message
 from .password_generator import generate_random_pass
 
-# TODO: Change validate_user: add 
 
 def register_user(name: str, email: str, password: str, contact:str, user, bcrypt) -> str:
     
@@ -59,7 +58,15 @@ def edit_profile(token: str, name: str, contact: str, user):
         token = token.encode('utf-8')
         user.update_one({"token" : token},{'$set': { "name" : name, "contact": contact}})
         updated_data = user.find_one({"token": token}, {"name": name, "contact": contact ,"_id":0})
-        return {"name": updated_data["name"], "contact": updated_data['contact']}
+        return jsonify(updated_data)
         return "DONE"
     except:
         return "Something Went Wrong Try Again Later or Contact Support."
+
+def get_user_detail(token: str, user):
+    try:
+        token = token.encode('utf-8')
+        data = user.find_one({"token": token}, {"name": 1, "email": 1, "contact": 1 ,"_id":0})
+        return jsonify(data)
+    except Exception as e:
+        return "Error!"

@@ -4,7 +4,7 @@ from flask_mail import Mail
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
-from services.users import register_user, login_user, forgot_password, change_password, edit_profile
+from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail
 import json
 
 app = Flask(__name__)
@@ -21,43 +21,47 @@ mail = Mail(app)
 CORS(app)
 bcrypt = Bcrypt(app)
 
-MONGODB_URI = os.environ.get('MONGODB_URI_PART1') + '&' + os.environ.get('MONGODB_URI_PART2') # add db url
-
-client = MongoClient(MONGODB_URI)
+MONGODB_URI = os.environ.get('MONGODB_URI_PART1') # add db url
+client = MongoClient(MONGODB_URI + '&w=majority')
 database = client.rentalvista
 
-@app.route("/signup", methods=["POST"])
+@app.route("/users/signup", methods=["POST"])
 def signup():
     user = database.user
     data = request.json
     print(data)
     return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
 
-@app.route("/login", methods=["POST"])
+@app.route("/users/login", methods=["POST"])
 def login():
     user = database.user
     data = request.json
     return login_user(data["email"], data["password"], user, bcrypt)
 
-@app.route("/forgot", methods=["POST"])
+@app.route("/users/forgot", methods=["POST"])
 def forgot():
     user = database.user
     data = request.json
     return forgot_password(data['email'], user, mail, bcrypt)
 
-@app.route("/change", methods=["POST"])
+@app.route("/users/change", methods=["POST"])
 def change():
+    token = request.headers['Authorization']
     user = database.user
     data = request.json
-    return change_password(data['token'], data['password'], data['new_password'], user, bcrypt)
+    return change_password(token, data['password'], data['new_password'], user, bcrypt)
 
-@app.route("/edit", methods=["POST"])
+@app.route("/users/user", methods=["POST"])
+def user_detail():
+    token = request.headers['Authorization']
+    user = database.user
+    return get_user_detail(token, user)
+
+@app.route("/users/edit", methods=["POST"])
 def edit():
     token = request.headers['Authorization']
     user = database.user
     data = request.json
-    print(token)
-    print(data)
     return edit_profile(token, data['name'], data['contact'], user)
 
 

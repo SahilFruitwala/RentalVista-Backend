@@ -30,3 +30,4 @@ A2_Sahil_Fruitwala.md
 config.ini
 .idea
 flask-mongo
+__pycache__
