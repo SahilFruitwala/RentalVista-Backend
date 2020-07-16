@@ -64,7 +64,6 @@ def signup():
     app.logger.info('Processing Signup...')
     user = database.user
     data = request.json
-    print(data)
     return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
 
 @app.route("/users/login", methods=["POST"])
