@@ -7,10 +7,12 @@ from pymongo import MongoClient
 import json
 from functools import wraps
 from logging.config import fileConfig
+from rq import Worker, Queue, Connection
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
 
+listen = ['high', 'default', 'low']
 
 app = Flask(__name__)
 fileConfig('logging.cfg')
@@ -63,21 +65,22 @@ def index():
 def signup():
     app.logger.info('Processing Signup...')
     user = database.user
-    data = request.json
+    data = request.json['data']
+    print(data)
     return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
 
 @app.route("/users/login", methods=["POST"])
 def login():
     app.logger.info('Processing Login...')
     user = database.user
-    data = request.json
+    data = request.json['data']
     return login_user(data["email"], data["password"], user, bcrypt)
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
     app.logger.info('Processing Forgot Password...')
     user = database.user
-    data = request.json
+    data = request.json['data']
     return forgot_password(data['email'], user, mail, bcrypt)
 
 @app.route("/users/change", methods=["POST"])
@@ -86,7 +89,7 @@ def change():
     app.logger.info('Processing Change Password...')
     token = request.headers['Authorization']
     user = database.user
-    data = request.json
+    data = request.json['data']
     return change_password(token, data['password'], data['new_password'], user, bcrypt)
 
 @app.route("/users/user", methods=["POST"])
@@ -103,7 +106,7 @@ def edit():
     app.logger.info('Processing Edit Profile...')
     token = request.headers['Authorization']
     user = database.user
-    data = request.json
+    data = request.json['data']
     return edit_profile(token, data['name'], data['contact'], user)
 
 @app.route("/users/logout", methods=["POST"])
