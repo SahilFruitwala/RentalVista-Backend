@@ -32,19 +32,22 @@ database = client.rentalvista
 def authentication(auth):
     @wraps(auth)
     def token_auth(*args, **kwargs):
-        token = request.headers['Authorization']
+        try:
+            token = request.headers['Authorization']
 
-        if not token:
-            return jsonify({"msg": "Please Login First!"}), 403
-        
-        token_data = decode_jwt(token)
-        if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
-            return jsonify({"msg": "Please Login First!"}), 403
-        
-        if database.deniedTokens.count_documents({"token": token}) != 0:
-            return jsonify({"msg": "Please Login First!"}), 403
+            if not token:
+                return jsonify({"msg": "Please Login First!"}), 403
+            
+            token_data = decode_jwt(token)
+            if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
+                return jsonify({"msg": "Please Login First!"}), 403
+            
+            if database.deniedTokens.count_documents({"token": token}) != 0:
+                return jsonify({"msg": "Please Login First!"}), 403
 
-        return auth(*args, **kwargs)
+            return auth(*args, **kwargs)
+        except Exception as e:
+            return jsonify({"msg" : 'Some internal error occurred!', "error": str(e)})
 
     return  token_auth
 
