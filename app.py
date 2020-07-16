@@ -5,6 +5,7 @@ from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
 import json
+from functools import wraps
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
@@ -47,7 +48,7 @@ def authentication(auth):
 
     return  token_auth
 
-@app.route("/users/signup", methods=["GET"])
+@app.route("/", methods=["GET"])
 def index():
     return "HELLo"
 
