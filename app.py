@@ -40,6 +40,9 @@ def authentication(auth):
         if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
             return jsonify({"msg": "Please Login First!"}), 403
         
+        if database.deniedTokens.count_documents({"token": token}) != 0:
+            return jsonify({"msg": "Please Login First!"}), 403
+
         return auth(*args, **kwargs)
 
     return  token_auth
@@ -102,4 +105,4 @@ if __name__ == '__main__':
 # !Done TODO: 1. Create a deniedTokens tokens 
 # !Done TODO: 2. on logout add token to deniedTokens 
 # !Done TODO: 3. on logout clear token from user 
-# TODO: 3. check token if token is in deniedTokens or not for services which needs authentication
+# !Done TODO: 3. check token if token is in deniedTokens or not for services which needs authentication
