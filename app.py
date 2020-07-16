@@ -47,6 +47,10 @@ def authentication(auth):
 
     return  token_auth
 
+@app.route("/users/signup", methods=["GET"])
+def index():
+    return "HELLo"
+
 @app.route("/users/signup", methods=["POST"])
 def signup():
     user = database.user
