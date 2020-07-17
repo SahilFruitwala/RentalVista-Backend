@@ -20,10 +20,13 @@ def login_user(email: str, password: str, user, bcrypt) -> str:
     try:
         if user.count_documents({"email": email}) == 0:
             return jsonify({"msg":"User does not exist!"})
-        
         result = user.find_one({"email":email}, {"password": password, "_id":1})
+        # print(email)
+        # print(password)
+        # print(result['password'])
+        # print(bcrypt.check_password_hash(result['password'].decode('utf-8'), password))
         if bcrypt.check_password_hash(result['password'], password):
-            print(type(result['_id']))
+            # print(type(result['_id']))
             token = encode_jwt(str(result['_id'])) # converted id into string then passed to encode_jwt
             user.update_one({"email" : email},{'$set': { "token" : token}})
             return jsonify({'msg': 'Login Success!', "token": token.decode('utf-8')}) # need to decode JWT from bytes to string 
