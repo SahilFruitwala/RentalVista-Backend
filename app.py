@@ -75,9 +75,9 @@ def login():
     user = database.user
     print(request.json['email'])
     print(request.json['password'])
-    return "DONE"
+    # return "DONE"
     # data = request.json['data']
-    # return login_user(data["email"], data["password"], user, bcrypt)
+    return login_user(request.json['email'], request.json['password'], user, bcrypt)
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
