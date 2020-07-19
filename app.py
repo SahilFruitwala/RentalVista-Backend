@@ -73,7 +73,8 @@ def signup():
 def login():
     app.logger.info('Processing Login...')
     user = database.user
-    print(request.json)
+    print(request.json['email'])
+    print(request.json['password'])
     return "DONE"
     # data = request.json['data']
     # return login_user(data["email"], data["password"], user, bcrypt)
