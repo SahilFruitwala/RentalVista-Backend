@@ -73,8 +73,10 @@ def signup():
 def login():
     app.logger.info('Processing Login...')
     user = database.user
-    data = request.json['data']
-    return login_user(data["email"], data["password"], user, bcrypt)
+    print(request.json)
+    return "DONE"
+    # data = request.json['data']
+    # return login_user(data["email"], data["password"], user, bcrypt)
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
