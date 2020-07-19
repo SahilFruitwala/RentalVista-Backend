@@ -57,7 +57,7 @@ def change_password(token: str, password: str, new_password: str, user, bcrypt) 
     try:
         token = token.encode('utf-8')
         user_data = user.find_one({"token":token}, {"password": password, "_id":1})
-        if bcrypt.check_password_hash(user_data['password'], password):
+        if compare_password(bcrypt, user_data['password'], password):
             hashed_password = bcrypt.generate_password_hash(new_password)
             user.update_one({"token" : token},{'$set': { "password" : hashed_password}})
             return jsonify({"msg" : "Password Changed!"})
@@ -90,7 +90,6 @@ def logout_user(token: str, user, deniedToken) -> str:
     except Exception as e:
         return jsonify({"msg" : 'Some internal error occurred!', "error": str(e)})
     return jsonify({"msg": "Logout Success!"})
-
 
 def compare_password(bcrypt, hashed_password, password) -> bool:
     return bcrypt.check_password_hash(hashed_password, password)
