@@ -9,7 +9,7 @@ Group: 5
 ## How to use it?
 To use to do the following steps:
 
-1. Clone my branch using this command `git clone --single-branch --branch sahil https://github.com/SahilFruitwala/rental-vista.git`
+1. Clone my branch using this command `git clone --single-branch --branch sahil https://github.com/SahilFruitwala/rentalvista-backend.git`
 2. Go to the folder
 3. Open terminal in folder and write the following command `pip install -r requirements.txt`
 4. Create .env file in root folder of repo
