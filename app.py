@@ -37,7 +37,8 @@ def authentication(auth):
     @wraps(auth)
     def token_auth(*args, **kwargs):
         try:
-            token = request.headers['Authorization']
+            # print(request.json)
+            token = request.json['headers']['Authorization']
 
             if not token:
                 return jsonify({"msg": "Please Login First!"}), 403
@@ -64,38 +65,56 @@ def index():
 def signup():
     app.logger.info('Processing Signup...')
     user = database.user
-    data = request.json
-    print(data)
+    try:
+        data = request.json['data']
+        temp = data['name']
+    except:
+        data = request.json
     return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
 
 @app.route("/users/login", methods=["POST"])
 def login():
     app.logger.info('Processing Login...')
     user = database.user
-    data = request.json
+    print(request.json)
+    try:
+        data = request.json['data']
+        temp = data['email']
+    except:
+        data = request.json
     return login_user(data['email'], data['password'], user, bcrypt)
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
     app.logger.info('Processing Forgot Password...')
     user = database.user
-    data = request.json
+    try:
+        data = request.json['data']
+        temp = data['email']
+    except:
+        data = request.json
     return forgot_password(data['email'], user, mail, bcrypt)
 
 @app.route("/users/change", methods=["POST"])
 @authentication
 def change():
     app.logger.info('Processing Change Password...')
-    token = request.headers['Authorization']
+    token = request.json['headers']['Authorization']
     user = database.user
-    data = request.json
+    try:
+        data = request.json['data']
+        temp = data['password']
+        print(data)
+    except:
+        data = request.json
+        print(data)
     return change_password(token, data['password'], data['new_password'], user, bcrypt)
 
 @app.route("/users/user", methods=["POST"])
 @authentication
 def user_detail():
     app.logger.info('Processing Find User...')
-    token = request.headers['Authorization']
+    token = request.json['headers']['Authorization']
     user = database.user
     return get_user_detail(token, user)
 
@@ -103,19 +122,24 @@ def user_detail():
 @authentication
 def edit():
     app.logger.info('Processing Edit Profile...')
-    token = request.headers['Authorization']
+    token = request.json['headers']['Authorization']
     user = database.user
-    data = request.json
+    try:
+        data = request.json['data']
+        temp = data['name']
+    except:
+        data = request.json
     return edit_profile(token, data['name'], data['contact'], user)
 
 @app.route("/users/logout", methods=["POST"])
 @authentication
 def logout():
     app.logger.info('Processing Logout...')
-    token = request.headers['Authorization']
+    token = request.json['headers']['Authorization']
+    # print(token)
     user = database.user
     deniedToken = database.deniedTokens
-    return logout(token, user, deniedToken)
+    return logout_user(token, user, deniedToken)
 
 
 if __name__ == '__main__':
