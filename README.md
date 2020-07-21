@@ -2,7 +2,7 @@
 ## Flask Backend
 ```
 Date Created: July 07, 2020
-Date Modified: - July 14, 2020
+Date Modified: - July 20, 2020
 Group: 5
 ```
 
