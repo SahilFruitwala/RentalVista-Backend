@@ -1,12 +1,12 @@
 import os
-from flask import Flask, jsonify, request, flash
+from flask import Flask, request, Response
 from flask_mail import Mail
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
-import json
 from functools import wraps
 from logging.config import fileConfig
+from json import dumps
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
@@ -25,6 +25,15 @@ app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = os.environ.get('SENDGRID_API_KEY')
 app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
+RESPONSE_HEADERS = {
+        'Access-Control-Allow-Origin': '*',
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+        'Content-Security-Policy' : "default-src 'self'",
+        'X-Content-Type-Options' : 'nosniff',
+        'X-Frame-Options' : 'SAMEORIGIN',
+        'X-XSS-Protection': '1; mode=block'
+    }
+
 mail = Mail(app)
 CORS(app)
 bcrypt = Bcrypt(app)
@@ -41,25 +50,31 @@ def authentication(auth):
             token = request.json['headers']['Authorization']
 
             if not token:
-                return jsonify({"msg": "Please Login First!"}), 403
+                return dumps({"msg": "Please Login First!"}), 401
             
             token_data = decode_jwt(token)
             if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
-                return jsonify({"msg": "Please Login First!"}), 403
+                return dumps({"msg": "Please Login First!"}), 401
             
             if database.deniedTokens.count_documents({"token": token}) != 0:
-                return jsonify({"msg": "Please Login First!"}), 403
+                return dumps({"msg": "Please Login First!"}), 401
 
             return auth(*args, **kwargs)
         except Exception as e:
-            return jsonify({"msg" : 'Some internal error occurred!', "error": str(e)})
+            return dumps({"msg" : 'Some internal error occurred!', "error": str(e)}), 500
 
     return  token_auth
+
 
 @app.route("/", methods=["GET"])
 def index():
     app.logger.info('Processing Index')
-    return "Hello"
+    # !ref: https://flask.palletsprojects.com/en/1.1.x/api/#response-objects
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = dumps({"msg":"HI"})
+    response.status_code = 500
+    print(response)
+    return response
 
 @app.route("/users/signup", methods=["POST"])
 def signup():
@@ -70,7 +85,12 @@ def signup():
         temp = data['name']
     except:
         data = request.json
-    return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
+    res = register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
 
 @app.route("/users/login", methods=["POST"])
 def login():
@@ -82,7 +102,12 @@ def login():
         temp = data['email']
     except:
         data = request.json
-    return login_user(data['email'], data['password'], user, bcrypt)
+    res = login_user(data['email'], data['password'], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    # print(response)
+    return response
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
@@ -93,7 +118,11 @@ def forgot():
         temp = data['email']
     except:
         data = request.json
-    return forgot_password(data['email'], user, mail, bcrypt)
+    res = forgot_password(data['email'], user, mail, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
 
 @app.route("/users/change", methods=["POST"])
 @authentication
@@ -108,7 +137,11 @@ def change():
     except:
         data = request.json
         print(data)
-    return change_password(token, data['password'], data['new_password'], user, bcrypt)
+    res = change_password(token, data['password'], data['new_password'], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
 
 @app.route("/users/user", methods=["POST"])
 @authentication
@@ -116,7 +149,11 @@ def user_detail():
     app.logger.info('Processing Find User...')
     token = request.json['headers']['Authorization']
     user = database.user
-    return get_user_detail(token, user)
+    res = get_user_detail(token, user)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
 
 @app.route("/users/edit", methods=["POST"])
 @authentication
@@ -129,7 +166,11 @@ def edit():
         temp = data['name']
     except:
         data = request.json
-    return edit_profile(token, data['name'], data['contact'], user)
+    res = edit_profile(token, data['name'], data['contact'], user)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
 
 @app.route("/users/logout", methods=["POST"])
 @authentication
@@ -139,14 +180,12 @@ def logout():
     # print(token)
     user = database.user
     deniedToken = database.deniedTokens
-    return logout_user(token, user, deniedToken)
+    res = logout_user(token, user, deniedToken)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
 
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
-
-# !Done TODO: 0. Create a logout method
-# !Done TODO: 1. Create a deniedTokens tokens 
-# !Done TODO: 2. on logout add token to deniedTokens 
-# !Done TODO: 3. on logout clear token from user 
-# !Done TODO: 3. check token if token is in deniedTokens or not for services which needs authentication
