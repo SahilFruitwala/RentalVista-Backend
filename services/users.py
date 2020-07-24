@@ -56,10 +56,7 @@ def forgot_password(email: str, user, mail, bcrypt) -> str:
 
 def change_password(token: str, password: str, new_password: str, user, bcrypt) -> str:
     try:
-        print(token)
-        # token = token.encode('utf-8')
         user_data = user.find_one({"token":token}, {"password": password, "_id":0})
-        print(user_data)
         if compare_password(bcrypt, user_data['password'], password):
             hashed_password = bcrypt.generate_password_hash(new_password)
             user.update_one({"token" : token},{'$set': { "password" : hashed_password}})
@@ -70,7 +67,6 @@ def change_password(token: str, password: str, new_password: str, user, bcrypt) 
 
 def edit_profile(token: str, name: str, contact: str, user):
     try:
-        # token = token.encode('utf-8')
         user.update_one({"token" : token},{'$set': { "name" : name, "contact": contact}})
         updated_data = user.find_one({"token": token}, {"name": name, "contact": contact ,"_id":0})
         return dumps(updated_data), 200
@@ -79,7 +75,6 @@ def edit_profile(token: str, name: str, contact: str, user):
 
 def get_user_detail(token: str, user):
     try:
-        # token = token.encode('utf-8')
         data = user.find_one({"token": token}, {"name": 1, "email": 1, "contact": 1 ,"_id":0})
         return dumps(data), 200
     except Exception as e:
