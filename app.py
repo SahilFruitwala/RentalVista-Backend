@@ -11,7 +11,7 @@ import base64
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
-from services.post import add_post, get_rooms
+from services.post import add_post, get_rooms, delete_room
 
 listen = ['high', 'default', 'low']
 
@@ -119,9 +119,25 @@ def add_property():
 @app.route("/post/get",methods=["GET"])
 def get_properties():
     app.logger.info('Getting all posts')
-    token = request.json['headers']['Authorization']
+    token = request.headers['Authorization']
     rooms = database.rooms
     res = get_rooms(token, rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
+
+@app.route("/post/delete", methods=["DELETE"])
+def delete_property():
+    app.logger.info("Deleting property")
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    res = delete_room(data['roomID'], rooms)
     response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
     response.data = res[0]
     response.status_code = res[1]
