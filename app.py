@@ -47,7 +47,7 @@ def authentication(auth):
     def token_auth(*args, **kwargs):
         try:
             # print(request.json)
-            token = request.json['headers']['Authorization']
+            token = request.headers['Authorization']
 
             if not token:
                 return dumps({"msg": "Please Login First!"}), 401
@@ -128,7 +128,7 @@ def forgot():
 @authentication
 def change():
     app.logger.info('Processing Change Password...')
-    token = request.json['headers']['Authorization']
+    token = request.headers['Authorization']
     user = database.user
     try:
         data = request.json['data']
@@ -147,7 +147,7 @@ def change():
 @authentication
 def user_detail():
     app.logger.info('Processing Find User...')
-    token = request.json['headers']['Authorization']
+    token = request.headers['Authorization']
     user = database.user
     res = get_user_detail(token, user)
     response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
@@ -159,7 +159,7 @@ def user_detail():
 @authentication
 def edit():
     app.logger.info('Processing Edit Profile...')
-    token = request.json['headers']['Authorization']
+    token = request.headers['Authorization']
     user = database.user
     try:
         data = request.json['data']
@@ -176,7 +176,7 @@ def edit():
 @authentication
 def logout():
     app.logger.info('Processing Logout...')
-    token = request.json['headers']['Authorization']
+    token = request.headers['Authorization']
     # print(token)
     user = database.user
     deniedToken = database.deniedTokens
@@ -185,6 +185,7 @@ def logout():
     response.data = res[0]
     response.status_code = res[1]
     return response
+
 
 
 if __name__ == '__main__':
