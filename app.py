@@ -143,7 +143,7 @@ def change():
     response.status_code = res[1]
     return response
 
-@app.route("/users/user", methods=["POST"])
+@app.route("/users/user", methods=["GET"])
 @authentication
 def user_detail():
     app.logger.info('Processing Find User...')
@@ -172,7 +172,7 @@ def edit():
     response.status_code = res[1]
     return response
 
-@app.route("/users/logout", methods=["POST"])
+@app.route("/users/logout", methods=["GET"])
 @authentication
 def logout():
     app.logger.info('Processing Logout...')
