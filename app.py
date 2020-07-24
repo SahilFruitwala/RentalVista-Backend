@@ -7,9 +7,11 @@ from pymongo import MongoClient
 from functools import wraps
 from logging.config import fileConfig
 from json import dumps
+import base64
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
+from services.post import add_post, get_rooms, delete_room
 
 listen = ['high', 'default', 'low']
 
@@ -38,7 +40,7 @@ mail = Mail(app)
 CORS(app)
 bcrypt = Bcrypt(app)
 
-MONGODB_URI = os.environ.get('MONGODB_URI_PART1') # add db url
+MONGODB_URI = os.environ.get('MONGODB_URI_PART1')
 client = MongoClient(MONGODB_URI + '&w=majority')
 database = client.rentalvista
 
@@ -86,6 +88,56 @@ def signup():
     response.data = res[0]
     response.status_code = res[1]
     app.logger.info('End Signup')
+    return response
+
+@app.route("/post/add", methods=["POST"])
+def add_property():
+    app.logger.info('Adding post')
+    token = request.json['headers']['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+        temp = data['headline']
+        print("hello"+temp)
+        print(data['headline'])
+    except:
+        data = request.json
+        print(data['rent'])
+    # mongo.save_file("1.jpg",data['images'][0])
+    print(data['images'][0]['file'])
+    res = add_post(token, data, rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
+
+@app.route("/post/get",methods=["GET"])
+def get_properties():
+    app.logger.info('Getting all posts')
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    res = get_rooms(token, rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
+
+@app.route("/post/delete", methods=["DELETE"])
+def delete_property():
+    app.logger.info("Deleting property")
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    res = delete_room(data['roomID'], rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
     return response
 
 @app.route("/users/login", methods=["POST"])
