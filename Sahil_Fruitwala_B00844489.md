@@ -1,0 +1,43 @@
+# Advanced Web Services
+
+## 1. How to run backend on your machine
+To use code base follow the steps given below:
+1. Clone the repository using https://github.com/SahilFruitwala/rentalvista-backend.git
+2. Go to the directory using terminal
+3. Install dependencies using `pip install -r requirements.txt`
+4. Create .env file into the root directory of project
+5. Add following environment variables
+    ```
+    URI = <mongodb atlas url>
+    SECRET_KEY = <secret-key anything>
+    SENDGRID_API_KEY = <API key of twilio>
+    MAIL_DEFAULT_SENDER = <single sender email from twilio>
+    ```
+    __Note__: In Mongodb Atlas url remove last part which looks like `&w=majority`. This is because when we set environment variable on heroku it was not allowing to add data with **&** 
+6. Run command `python app.py` in windows and for mac/linux `python3 app.py`
+
+## 2. How to run frontend on your machine
+To use code base follow the steps given below:
+1. Clone the repository using https://github.com/SahilFruitwala/rental-vista.git
+2. Go to the directory using terminal
+3. Install dependencies using `npm install`
+4. Create .env file into the root directory of project
+5. Add following environment variables
+    `REACT_APP_REGISTER_URL=<API Endpoint>`
+    __Note__: For local server add `http:` and make sure API-endpoint/Server supports CORS. For more details regarding CORS go to this [Link](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). After adding environment variable into `.env` file one has to restart development server.
+6. Run command `npm run start`
+
+### Backend Files and Endpoints developed
+`Note: Base project was setup by me.`
+* Created additional python files in **services** directory:
+    1. [services/users.py](./services/users.py)
+    2. [services/token.py]
+    3. [services/password_generator.py]
+* Endpoints created in `app.py` file:
+    1. Signup endpoint: **/users/login**
+    2. Login endpoint: **/users/login**
+    3. Forgot password endpoint: **/users/forgot**
+    4. Change password endpoint: **/users/change**
+    5. Fetching user details endpoint: **/users/user**
+    6. Edit user details endpoint: **/users/edit**
+    7. Logout endpoint: **/users/logout**
