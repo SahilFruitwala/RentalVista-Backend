@@ -253,3 +253,12 @@
 11:15:11-app.py-app-app: Processing Find User...
 11:15:14-app.py-app-app: Processing Logout...
 11:15:59-app.py-app-app: Processing Login...
+13:26:56-app.py-app-app: Start Login
+13:26:56-app.py-app-app: Start Credentials Verification
+13:26:58-app.py-app-app: End Credentials Verification
+13:26:58-app.py-app-app: End Login
+13:27:02-app.py-app-app: Authenticating User
+13:27:02-app.py-app-app: Start Logout
+13:27:02-app.py-app-app: Start Logout Inner
+13:27:02-app.py-app-app: End Logout Inner
+13:27:02-app.py-app-app: End Logout
