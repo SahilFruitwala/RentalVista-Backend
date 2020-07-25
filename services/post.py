@@ -34,6 +34,7 @@ def get_rooms(token: str, rooms) -> str:
             roomID = dumps(room['_id'],default=str)
             userID = dumps(room['userID'],default=str)
             description = room['description']
+            title = room['title']
             image = room['images'][0]
             rating = dumps(str(room['ratings']))
             isPromoted = room['isPromoted']
@@ -42,6 +43,7 @@ def get_rooms(token: str, rooms) -> str:
                 'roomID':roomID,
                 'userID':userID,
                 'image': image,
+                'title':title,
                 'rating': loads(rating),
                 'isPromoted':isPromoted,
                 'rent': rent,
