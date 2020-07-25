@@ -3,6 +3,10 @@
 >Heroku Frontend Link: https://rentalvista.herokuapp.com/
 >Heroku Back-end Link: https://rentalvista-api.herokuapp.com/
 
+MAIL_DEFAULT_SENDER: sahil.fruitwala@dal.ca
+MONGODB_URI_PART1:   mongodb+srv://aws:rentalvista@rentalvista.7mvg4.mongodb.net/rentalvista?retryWrites=true 
+SECRET_KEY:          rentalvista-key
+SENDGRID_API_KEY:    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
 
 > Feature Developed: **User Management System**
 
