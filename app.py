@@ -219,6 +219,25 @@ def bookAppointment():
                         content_type='application/json')
     return response
 
+@app.route('/myappointment/<userId>', methods=['GET'])
+def get_appointment(userId):
+    app.logger.info("Getting Appointment")
+    appointment = database.appointment
+    data = appointment.find({"email" : userId})
+    appointments = []
+    for i in data:
+        data={
+            'postid': i['postid'],
+            'date': i['date'],
+            'time': i['time'],
+            'email': i['email'],
+            'owneremail': i['owneremail']
+        }
+        appointments.append(data)
+        data={}
+   
+    return json.dumps(appointments), 200
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
