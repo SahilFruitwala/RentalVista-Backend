@@ -321,7 +321,10 @@ def editblog():
                 return jsonify ("Author not found")
 
         else:
-            return {'response': 'Title missing'}
+            if desc:
+                return jsonify('Desc missing')
+            else:
+                return jsonify('Title missing')
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
