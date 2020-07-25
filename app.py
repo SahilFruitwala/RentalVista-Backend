@@ -14,6 +14,7 @@ from services.users import register_user, login_user, forgot_password, change_pa
 from services.token import decode_jwt
 from services.appointment import book_appointment
 from services.post import add_post, get_rooms, delete_room
+from services.properties import get_all_properties
 
 listen = ['high', 'default', 'low']
 
@@ -398,6 +399,13 @@ def get_appointment(userId):
 
     return json.dumps(appointments), 200
 
+#Author: Naitik Prajapti - B00856835
+@app.route("/api/getrooms", methods=["GET"])
+def getRoom():
+    app.logger.info('Processing Get Rooms...')
+    # Fetch Documents from collection rooms
+    properties = database.rooms
+    return get_all_properties(properties)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
