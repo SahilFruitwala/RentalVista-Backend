@@ -29,4 +29,5 @@ A2_Sahil_Fruitwala.md
 .env
 config.ini
 .idea
-flask-mongo
+flask
+__pycache__
