@@ -247,16 +247,6 @@ def logout():
     response.status_code = res[1]
     app.logger.info('End Logout')
     return response
-
-@app.route("/users/logout", methods=["POST"])
-@authentication
-def logout():
-    app.logger.info('Processing Logout...')
-    token = request.json['headers']['Authorization']
-    # print(token)
-    user = database.user
-    deniedToken = database.deniedTokens
-    return logout_user(token, user, deniedToken)
     
 @app.route("/getblog", methods=["GET"])
 def getblog():

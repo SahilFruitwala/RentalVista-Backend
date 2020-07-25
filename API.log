@@ -254,3 +254,12 @@
 11:15:11 INFO app Thread-70 : Processing Find User...
 11:15:14 INFO app Thread-72 : Processing Logout...
 11:15:59 INFO app Thread-74 : Processing Login...
+13:26:56 INFO app Thread-4 : Start Login
+13:26:56 INFO app Thread-4 : Start Credentials Verification
+13:26:58 INFO app Thread-4 : End Credentials Verification
+13:26:58 INFO app Thread-4 : End Login
+13:27:02 INFO app Thread-6 : Authenticating User
+13:27:02 INFO app Thread-6 : Start Logout
+13:27:02 INFO app Thread-6 : Start Logout Inner
+13:27:02 INFO app Thread-6 : End Logout Inner
+13:27:02 INFO app Thread-6 : End Logout
