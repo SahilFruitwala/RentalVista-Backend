@@ -31,8 +31,8 @@ To use code base follow the steps given below:
 `Note: Base project was setup by me.`
 * Created additional python files in **services** directory:
     1. [services/users.py](./services/users.py)
-    2. [services/token.py]
-    3. [services/password_generator.py]
+    2. [services/token.py](./services/token.py)
+    3. [services/password_generator.py](./services/password_generator.py)
 * Endpoints created in `app.py` file:
     1. Signup endpoint: **/users/login**
     2. Login endpoint: **/users/login**
