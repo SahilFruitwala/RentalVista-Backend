@@ -35,14 +35,14 @@ def get_rooms(token: str, rooms) -> str:
             userID = dumps(room['userID'],default=str)
             description = room['description']
             image = room['images'][0]
-            rating = room['ratings']
+            rating = dumps(str(room['ratings']))
             isPromoted = room['isPromoted']
             rent = room['rent']
             dict_room = {
                 'roomID':roomID,
                 'userID':userID,
                 'image': image,
-                'rating': rating,
+                'rating': loads(rating),
                 'isPromoted':isPromoted,
                 'rent': rent,
                 'description': description
