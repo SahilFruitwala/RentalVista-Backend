@@ -1,16 +1,18 @@
 import os
 import pymongo
-from flask import Flask, jsonify, request, flash
+from flask import Flask, jsonify, request, flash, Response
 from flask_mail import Mail
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
-import json
 from functools import wraps
 from logging.config import fileConfig
+from json import dumps
+import base64
 
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
+from services.post import add_post, get_rooms, delete_room
 
 listen = ['high', 'default', 'low']
 
@@ -26,114 +28,225 @@ app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = os.environ.get('SENDGRID_API_KEY')
 app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
+RESPONSE_HEADERS = {
+        'Access-Control-Allow-Origin': '*',
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+        'Content-Security-Policy' : "default-src 'self'",
+        'X-Content-Type-Options' : 'nosniff',
+        'X-Frame-Options' : 'SAMEORIGIN',
+        'X-XSS-Protection': '1; mode=block'
+    }
+
 mail = Mail(app)
 CORS(app)
 bcrypt = Bcrypt(app)
 
-MONGODB_URI = os.environ.get('MONGODB_URI_PART1') # add db url
+MONGODB_URI = os.environ.get('MONGODB_URI_PART1')
 client = MongoClient(MONGODB_URI + '&w=majority')
 database = client.rentalvista
-
-#client = pymongo.MongoClient("mongodb+srv://testuser:test123@tutorial6-ju5ov.mongodb.net/web?retryWrites=true&w=majority")
-#database = client.web
 
 def authentication(auth):
     @wraps(auth)
     def token_auth(*args, **kwargs):
         try:
-            # print(request.json)
-            token = request.json['headers']['Authorization']
+            app.logger.info('Authenticating User')
+            token = request.headers['Authorization']
 
             if not token:
-                return jsonify({"msg": "Please Login First!"}), 403
+                app.logger.info('Checking Token Availability')
+                return dumps({"msg": "Please Login First!"}), 401
             
             token_data = decode_jwt(token)
             if token_data == "Signature expired. Please log in again." or token_data == 'Invalid token. Please log in again.':
-                return jsonify({"msg": "Please Login First!"}), 403
+                app.logger.info('Validating Token')
+                return dumps({"msg": "Please Login First!"}), 401
             
             if database.deniedTokens.count_documents({"token": token}) != 0:
-                return jsonify({"msg": "Please Login First!"}), 403
+                app.logger.info('Invalid Token Found')
+                return dumps({"msg": "Please Login First!"}), 401
 
             return auth(*args, **kwargs)
         except Exception as e:
-            return jsonify({"msg" : 'Some internal error occurred!', "error": str(e)})
+            app.logger.info('Exception Occurred in Token Validation')
+            return dumps({"msg" : 'Some internal error occurred!', "error": str(e)}), 500
 
     return  token_auth
 
-@app.route("/", methods=["GET"])
-def index():
-    app.logger.info('Processing Index')
-    return "Hello"
 
 @app.route("/users/signup", methods=["POST"])
 def signup():
-    app.logger.info('Processing Signup...')
+    app.logger.info('Start Signup')
     user = database.user
     try:
         data = request.json['data']
         temp = data['name']
     except:
         data = request.json
-    return register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
+    app.logger.info('Star Registering User')
+    res = register_user(data["name"], data["email"], data["password"], data["contact"], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Registering User')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Signup')
+    return response
+
+@app.route("/post/add", methods=["POST"])
+def add_property():
+    app.logger.info('Adding post')
+    token = request.json['headers']['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+        temp = data['headline']
+        print("hello"+temp)
+        print(data['headline'])
+    except:
+        data = request.json
+        print(data['rent'])
+    # mongo.save_file("1.jpg",data['images'][0])
+    print(data['images'][0]['file'])
+    res = add_post(token, data, rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
+
+@app.route("/post/get",methods=["GET"])
+def get_properties():
+    app.logger.info('Getting all posts')
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    res = get_rooms(token, rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
+
+@app.route("/post/delete", methods=["DELETE"])
+def delete_property():
+    app.logger.info("Deleting property")
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    res = delete_room(data['roomID'], rooms)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    print(response)
+    return response
 
 @app.route("/users/login", methods=["POST"])
 def login():
-    app.logger.info('Processing Login...')
+    app.logger.info('Start Login')
     user = database.user
-    print(request.json)
     try:
         data = request.json['data']
         temp = data['email']
     except:
         data = request.json
-    return login_user(data['email'], data['password'], user, bcrypt)
+    app.logger.info('Start Credentials Verification')
+    res = login_user(data['email'], data['password'], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Credentials Verification')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Login')
+    return response
 
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
-    app.logger.info('Processing Forgot Password...')
+    app.logger.info('Start Forgot Password')
     user = database.user
     try:
         data = request.json['data']
         temp = data['email']
     except:
         data = request.json
-    return forgot_password(data['email'], user, mail, bcrypt)
+    app.logger.info('Start Forgot Password Inner')
+    res = forgot_password(data['email'], user, mail, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Forgot Password Inner')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Forgot Password')
+    return response
 
 @app.route("/users/change", methods=["POST"])
 @authentication
 def change():
-    app.logger.info('Processing Change Password...')
-    token = request.json['headers']['Authorization']
+    app.logger.info('Start Change Password')
+    token = request.headers['Authorization']
     user = database.user
     try:
         data = request.json['data']
         temp = data['password']
-        print(data)
     except:
         data = request.json
-        print(data)
-    return change_password(token, data['password'], data['new_password'], user, bcrypt)
+    app.logger.info('Start Change Password Inner')
+    res = change_password(token, data['password'], data['new_password'], user, bcrypt)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Change Password Inner')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Change Password')
+    return response
 
-@app.route("/users/user", methods=["POST"])
+@app.route("/users/user", methods=["GET"])
 @authentication
 def user_detail():
-    app.logger.info('Processing Find User...')
-    token = request.json['headers']['Authorization']
+    app.logger.info('Start Fetching User')
+    token = request.headers['Authorization']
     user = database.user
-    return get_user_detail(token, user)
+    app.logger.info('Start Fetching User Inner')
+    res = get_user_detail(token, user)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Fetching User Inner')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Fetching User')
+    return response
 
 @app.route("/users/edit", methods=["POST"])
 @authentication
 def edit():
-    app.logger.info('Processing Edit Profile...')
-    token = request.json['headers']['Authorization']
+    app.logger.info('Start Edit Profile')
+    token = request.headers['Authorization']
     user = database.user
     try:
         data = request.json['data']
         temp = data['name']
     except:
         data = request.json
-    return edit_profile(token, data['name'], data['contact'], user)
+    app.logger.info('Start Edit Profile Inner')
+    res = edit_profile(token, data['name'], data['contact'], user)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Edit Profile Inner')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Edit Profile')
+    return response
+
+@app.route("/users/logout", methods=["GET"])
+@authentication
+def logout():
+    app.logger.info('Start Logout')
+    token = request.headers['Authorization']
+    user = database.user
+    deniedToken = database.deniedTokens
+    app.logger.info('Start Logout Inner')
+    res = logout_user(token, user, deniedToken)
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    app.logger.info('End Logout Inner')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Logout')
+    return response
 
 @app.route("/users/logout", methods=["POST"])
 @authentication
@@ -218,9 +331,3 @@ def editblog():
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
-
-# !Done TODO: 0. Create a logout method
-# !Done TODO: 1. Create a deniedTokens tokens 
-# !Done TODO: 2. on logout add token to deniedTokens 
-# !Done TODO: 3. on logout clear token from user 
-# !Done TODO: 3. check token if token is in deniedTokens or not for services which needs authentication
