@@ -31,3 +31,6 @@ config.ini
 .idea
 flask
 __pycache__
+API.log
+debug.log
+loop.log
