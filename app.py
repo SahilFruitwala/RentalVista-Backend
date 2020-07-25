@@ -364,7 +364,7 @@ def editblog():
             else:
                 return jsonify("Author not found")
 
-
+#Author: Krupa Patel - B00828120
 @app.route("/appointment/book", methods=["POST"])
 def bookAppointment():
     app.logger.info("Booking an Appointment")
@@ -378,7 +378,7 @@ def bookAppointment():
                         content_type='application/json')
     return response
 
-
+#Author: Krupa Patel - B00828120
 @app.route('/myappointment/<userId>', methods=['GET'])
 def get_appointment(userId):
     app.logger.info("Getting Appointment")
