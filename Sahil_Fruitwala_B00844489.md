@@ -1,5 +1,11 @@
 # Advanced Web Services
 
+>Heroku Frontend Link: https://rentalvista.herokuapp.com/
+>Heroku Back-end Link: https://rentalvista-api.herokuapp.com/
+
+
+> Feature Developed: **User Management System**
+
 ## 1. How to run backend on your machine
 To use code base follow the steps given below:
 1. Clone the repository using https://github.com/SahilFruitwala/rentalvista-backend.git
@@ -41,3 +47,4 @@ To use code base follow the steps given below:
     5. Fetching user details endpoint: **/users/user**
     6. Edit user details endpoint: **/users/edit**
     7. Logout endpoint: **/users/logout**
+
