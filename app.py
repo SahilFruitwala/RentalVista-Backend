@@ -266,7 +266,11 @@ def addblog():
         return jsonify(err)
     else:
         lastid = database.blogs.find().sort([("_id",-1)]).limit(1)
-        id = int(lastid [0]["id"]) + 1
+        print("Last id:",lastid)
+        if (lastid):
+            id = int(lastid [0]["id"]) + 1
+        else :
+            id = 1
         
         print(id)
         if database.blogs.find_one({'title': title}):
