@@ -1,3 +1,8 @@
+# Author: Sahil Fruitwala - B00844489
+# Author: Naitik Prajapti - B00856835
+# Author: Krupa Patel - B00828120
+# Author: Gaurav Anand - B00832139
+# Author: Amogh Adithya Bangalore - B00833535
 import os
 import pymongo
 from flask import Flask, jsonify, request, flash, Response
@@ -14,6 +19,7 @@ from services.users import register_user, login_user, forgot_password, change_pa
 from services.token import decode_jwt
 from services.appointment import book_appointment
 from services.post import add_post, get_rooms, delete_room
+from services.properties import get_all_properties
 
 listen = ['high', 'default', 'low']
 
@@ -47,7 +53,7 @@ client = MongoClient(MONGODB_URI + '&w=majority')
 
 database = client.rentalvista
 
-
+#Author: Sahil Fruitwala - B00844489
 def authentication(auth):
     @wraps(auth)
     def token_auth(*args, **kwargs):
@@ -77,18 +83,7 @@ def authentication(auth):
     return token_auth
 
 
-@app.route("/", methods=["GET"])
-def index():
-    app.logger.info('Processing Index')
-    # !ref: https://flask.palletsprojects.com/en/1.1.x/api/#response-objects
-    response = Response(headers=RESPONSE_HEADERS,
-                        content_type='application/json')
-    response.data = dumps({"msg": "HI"})
-    response.status_code = 500
-    print(response)
-    return response
-
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/signup", methods=["POST"])
 def signup():
     app.logger.info('Start Signup')
@@ -157,7 +152,7 @@ def delete_property():
     response.status_code = res[1]
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/login", methods=["POST"])
 def login():
     app.logger.info('Start Login')
@@ -179,7 +174,7 @@ def login():
     app.logger.info('End Login')
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
     app.logger.info('Start Forgot Password')
@@ -201,7 +196,7 @@ def forgot():
     app.logger.info('End Forgot Password')
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/change", methods=["POST"])
 @authentication
 def change():
@@ -226,7 +221,7 @@ def change():
     app.logger.info('End Change Password')
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/user", methods=["GET"])
 @authentication
 def user_detail():
@@ -244,7 +239,7 @@ def user_detail():
     app.logger.info('End Fetching User')
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/edit", methods=["POST"])
 @authentication
 def edit():
@@ -268,7 +263,7 @@ def edit():
     app.logger.info('End Edit Profile')
     return response
 
-
+#Author: Sahil Fruitwala - B00844489
 @app.route("/users/logout", methods=["GET"])
 @authentication
 def logout():
@@ -397,6 +392,13 @@ def get_appointment(userId):
 
     return json.dumps(appointments), 200
 
+#Author: Naitik Prajapti - B00856835
+@app.route("/api/getrooms", methods=["GET"])
+def getRoom():
+    app.logger.info('Processing Get Rooms...')
+    # Fetch Documents from collection rooms
+    properties = database.rooms
+    return get_all_properties(properties)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
