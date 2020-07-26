@@ -1,3 +1,4 @@
+# Author: Sahil Fruitwala - B00844489
 import jwt
 import datetime
 from os import environ
