@@ -238,7 +238,7 @@ def logout():
     response.status_code = res[1]
     app.logger.info('End Logout')
     return response
-    
+#Author: Amogh Adithya Bangalore - B00833535   
 @app.route("/getblog", methods=["GET"])
 def getblog():
     blog_collection = database.blogs
@@ -246,6 +246,7 @@ def getblog():
     blog_list = list(blog)
     return jsonify(blog_list)
     
+#Author: Amogh Adithya Bangalore - B00833535      
 @app.route("/addblog", methods=["POST"])
 def addblog():
     get_user_data = request.get_json()
@@ -269,7 +270,8 @@ def addblog():
         else:
             database.blogs.insert({'id': str(id),'title': title,'author': author, 'desc': desc})
             return jsonify("User added successfully!..")
-            
+
+#Author: Amogh Adithya Bangalore - B00833535              
 @app.route("/deleteblog", methods=["POST"])
 def deleteblog():
     data = request.get_json()
@@ -291,8 +293,8 @@ def deleteblog():
         else:            
             return jsonify("Record not found!")
 
-
-@app.route("/editblog", methods=["PUT"])
+#Author: Amogh Adithya Bangalore - B00833535 
+@app.route("/editblog", methods=["PUT"]) 
 def editblog():
     data = request.get_json()
     title = data["title"]
