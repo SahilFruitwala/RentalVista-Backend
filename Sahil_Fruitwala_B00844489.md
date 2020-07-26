@@ -6,6 +6,29 @@
 
 > Feature Developed: **User Management System**
 
+#### User Management Feature
+I have created user management feature for assignment 4. In this assignment, mainly, I have created backend part and some frontend part. I have developed API to signup, login, edit profile, change password, forgot password and fetch user data. On frontend part, I have developed two new pages, forgot password and change password pages. (Note: All pages for user management feature were developed earlier.)
+
+### Frontend Files created
+* Files created apart from existing files:
+    1. 
+
+### Backend Files and Endpoints created
+`Note: Base project was setup by me.`
+* Created additional python files in **services** directory:
+    1. [services/users.py](./services/users.py)
+    2. [services/token.py](./services/token.py)
+    3. [services/password_generator.py](./services/password_generator.py)
+* Endpoints created in `app.py` file:
+    1. Signup endpoint: **/users/login**
+    2. Login endpoint: **/users/login**
+    3. Forgot password endpoint: **/users/forgot**
+    4. Change password endpoint: **/users/change**
+    5. Fetching user details endpoint: **/users/user**
+    6. Edit user details endpoint: **/users/edit**
+    7. Logout endpoint: **/users/logout**
+
+
 ## 1. How to run backend on your machine
 To use code base follow the steps given below:
 1. Clone the repository using https://github.com/SahilFruitwala/rentalvista-backend.git
