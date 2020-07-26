@@ -2,11 +2,8 @@
 
 >Heroku Frontend Link: https://rentalvista.herokuapp.com/
 >Heroku Back-end Link: https://rentalvista-api.herokuapp.com/
-
-MAIL_DEFAULT_SENDER: sahil.fruitwala@dal.ca
-MONGODB_URI_PART1:   mongodb+srv://aws:rentalvista@rentalvista.7mvg4.mongodb.net/rentalvista?retryWrites=true 
-SECRET_KEY:          rentalvista-key
-SENDGRID_API_KEY:    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
+>Github Frontend Link: https://github.com/SahilFruitwala/Group5_RentalVista_Frontend
+>Github Back-end Link: https://github.com/SahilFruitwala/Group5_RentalVista_Backend
 
 > Feature Developed: **User Management System**
 
@@ -15,7 +12,10 @@ I have created user management feature for assignment 4. In this assignment, mai
 
 ### Frontend Files created
 * Files created apart from existing files:
-    1. 
+    1. ./src/components/profile/resetPassword/resetPassword.js
+    2. ./src/components/profile/resetPassword/resetPassword.css
+    3. ./src/components/login/forgot.js
+
 
 ### Backend Files and Endpoints created
 `Note: Base project was setup by me.`
