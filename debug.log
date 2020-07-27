@@ -262,3 +262,22 @@
 13:27:02-app.py-app-app: Start Logout Inner
 13:27:02-app.py-app-app: End Logout Inner
 13:27:02-app.py-app-app: End Logout
+15:58:41-app.py-app-app: Authenticating User
+15:58:41-app.py-app-app: Exception Occurred in Token Validation
+16:18:26-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\mime\\__pycache__\\nonmultipart.cpython-37.pyc', reloading
+16:53:06-app.py-app-app: Getting comments
+17:17:21-app.py-app-app: Getting comments
+17:17:55-app.py-app-app: Posting comment
+17:18:42-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\network.cpython-37.pyc', reloading
+17:19:58-app.py-app-app: Posting comment
+17:21:03-app.py-app-app: Posting comment
+18:38:30-app.py-app-app: Editing comments
+18:39:15-_internal.py-_internal-werkzeug:  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\services\\__pycache__\\users.cpython-37.pyc', reloading
+18:51:13-app.py-app-app: Editing comments
+18:51:58-app.py-app-app: Editing comments
+18:52:14-app.py-app-app: Editing comments
+18:52:30-app.py-app-app: Editing comments
+19:05:48-app.py-app-app: Deleting comments
+19:07:34-app.py-app-app: Editing comments
+19:08:36-app.py-app-app: Deleting comments
+19:38:06-_internal.py-_internal-werkzeug:  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\Group5_RentalVista_Backend\\env\\Lib\\site-packages\\click\\_unicodefun.py', reloading

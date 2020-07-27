@@ -31,7 +31,10 @@ config.ini
 .idea
 flask
 __pycache__
+<<<<<<< HEAD
 Sahil_Fruitwala_B00844489.md
+=======
 API.log
 debug.log
 loop.log
+>>>>>>> adfe9850de4a08cc7c8581151ba81800acb4d7ef

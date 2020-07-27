@@ -263,3 +263,22 @@
 13:27:02 INFO app Thread-6 : Start Logout Inner
 13:27:02 INFO app Thread-6 : End Logout Inner
 13:27:02 INFO app Thread-6 : End Logout
+15:58:41 INFO app Thread-6 : Authenticating User
+15:58:41 INFO app Thread-6 : Exception Occurred in Token Validation
+16:18:26 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\mime\\__pycache__\\nonmultipart.cpython-37.pyc', reloading
+16:53:06 INFO app Thread-8 : Getting comments
+17:17:21 INFO app Thread-7 : Getting comments
+17:17:55 INFO app Thread-8 : Posting comment
+17:18:42 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\network.cpython-37.pyc', reloading
+17:19:58 INFO app Thread-6 : Posting comment
+17:21:03 INFO app Thread-6 : Posting comment
+18:38:30 INFO app Thread-7 : Editing comments
+18:39:15 INFO werkzeug Thread-3 :  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\services\\__pycache__\\users.cpython-37.pyc', reloading
+18:51:13 INFO app Thread-6 : Editing comments
+18:51:58 INFO app Thread-6 : Editing comments
+18:52:14 INFO app Thread-7 : Editing comments
+18:52:30 INFO app Thread-8 : Editing comments
+19:05:48 INFO app Thread-6 : Deleting comments
+19:07:34 INFO app Thread-7 : Editing comments
+19:08:36 INFO app Thread-8 : Deleting comments
+19:38:06 INFO werkzeug Thread-3 :  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\Group5_RentalVista_Backend\\env\\Lib\\site-packages\\click\\_unicodefun.py', reloading
