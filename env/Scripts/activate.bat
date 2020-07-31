@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\SEM3\WEB\PROJECT\A4\rentalvista-backend\env
+set VIRTUAL_ENV=D:\Term 3\Web\Group5_RentalVista_Backend-develop\env
 
 if not defined PROMPT set PROMPT=$P$G
 

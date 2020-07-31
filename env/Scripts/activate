@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\SEM3\WEB\PROJECT\A4\rentalvista-backend\env"
+VIRTUAL_ENV="D:\Term 3\Web\Group5_RentalVista_Backend-develop\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

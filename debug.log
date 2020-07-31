@@ -262,3 +262,147 @@
 13:27:02-app.py-app-app: Start Logout Inner
 13:27:02-app.py-app-app: End Logout Inner
 13:27:02-app.py-app-app: End Logout
+15:58:41-app.py-app-app: Authenticating User
+15:58:41-app.py-app-app: Exception Occurred in Token Validation
+16:18:26-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\mime\\__pycache__\\nonmultipart.cpython-37.pyc', reloading
+16:53:06-app.py-app-app: Getting comments
+17:17:21-app.py-app-app: Getting comments
+17:17:55-app.py-app-app: Posting comment
+17:18:42-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\network.cpython-37.pyc', reloading
+17:19:58-app.py-app-app: Posting comment
+17:21:03-app.py-app-app: Posting comment
+18:38:30-app.py-app-app: Editing comments
+18:39:15-_internal.py-_internal-werkzeug:  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\services\\__pycache__\\users.cpython-37.pyc', reloading
+18:51:13-app.py-app-app: Editing comments
+18:51:58-app.py-app-app: Editing comments
+18:52:14-app.py-app-app: Editing comments
+18:52:30-app.py-app-app: Editing comments
+19:05:48-app.py-app-app: Deleting comments
+19:07:34-app.py-app-app: Editing comments
+19:08:36-app.py-app-app: Deleting comments
+19:38:06-_internal.py-_internal-werkzeug:  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\Group5_RentalVista_Backend\\env\\Lib\\site-packages\\click\\_unicodefun.py', reloading
+09:37:41-app.py-app-app: Getting comments
+09:38:17-app.py-app-app: Getting comments
+09:38:21-app.py-app-app: Getting comments
+09:39:03-app.py-app-app: Getting comments
+09:39:08-app.py-app-app: Getting comments
+09:39:14-app.py-app-app: Getting comments
+09:40:21-app.py-app-app: Getting comments
+09:41:00-app.py-app-app: Getting comments
+09:41:15-app.py-app-app: Getting comments
+09:51:17-app.py-app-app: Authenticating User
+09:51:17-app.py-app-app: Exception Occurred in Token Validation
+09:52:03-app.py-app-app: Authenticating User
+09:52:03-app.py-app-app: Exception Occurred in Token Validation
+09:58:35-app.py-app-app: Getting comments
+09:59:08-app.py-app-app: Posting comment
+10:00:40-app.py-app-app: Editing comments
+10:00:54-app.py-app-app: Editing comments
+10:01:33-app.py-app-app: Deleting comments
+10:02:29-app.py-app-app: Getting comments
+10:03:34-app.py-app-app: Getting comments
+11:22:53-app.py-app-app: Getting comments
+11:25:01-app.py-app-app: Getting comments
+11:25:22-app.py-app-app: Getting comments
+11:25:53-app.py-app-app: Getting comments
+19:52:16-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\dns\\__pycache__\\rdataclass.cpython-37.pyc', reloading
+19:52:54-app.py-app-app: Getting comments
+19:53:06-app.py-app-app: Getting comments
+19:53:23-app.py-app-app: Posting comment
+19:53:44-app.py-app-app: Getting comments
+19:55:42-app.py-app-app: Getting comments
+19:55:50-app.py-app-app: Getting comments
+19:58:30-app.py-app-app: Getting comments
+19:59:23-app.py-app-app: Getting comments
+20:00:45-app.py-app-app: Getting comments
+20:05:59-app.py-app-app: Getting comments
+20:06:21-app.py-app-app: Getting comments
+20:09:33-app.py-app-app: Getting comments
+20:10:06-app.py-app-app: Getting comments
+11:54:41-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\__pycache__\\flask_bcrypt.cpython-37.pyc', reloading
+11:56:45-app.py-app-app: Getting comments
+11:56:54-app.py-app-app: Getting comments
+12:10:46-app.py-app-app: Getting comments
+12:18:29-app.py-app-app: Getting comments
+12:18:36-app.py-app-app: Posting comment
+12:18:38-app.py-app-app: Getting comments
+12:21:39-app.py-app-app: Getting comments
+12:21:43-app.py-app-app: Getting comments
+12:21:49-app.py-app-app: Posting comment
+12:21:50-app.py-app-app: Getting comments
+12:22:58-app.py-app-app: Getting comments
+12:24:54-app.py-app-app: Getting comments
+12:25:00-app.py-app-app: Getting comments
+12:25:04-app.py-app-app: Posting comment
+12:25:06-app.py-app-app: Getting comments
+12:28:45-app.py-app-app: Getting comments
+12:28:53-app.py-app-app: Posting comment
+12:28:55-app.py-app-app: Getting comments
+12:29:08-app.py-app-app: Posting comment
+12:29:10-app.py-app-app: Getting comments
+14:09:11-app.py-app-app: Posting comment
+14:09:13-app.py-app-app: Getting comments
+14:09:49-app.py-app-app: Posting comment
+14:09:51-app.py-app-app: Getting comments
+14:12:11-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\server.cpython-37.pyc', reloading
+15:46:47-app.py-app-app: Posting comment
+15:46:51-app.py-app-app: Getting comments
+15:56:40-app.py-app-app: Posting comment
+15:56:43-app.py-app-app: Getting comments
+15:57:25-app.py-app-app: Posting comment
+15:57:26-app.py-app-app: Getting comments
+16:04:00-app.py-app-app: Getting comments
+16:04:06-app.py-app-app: Posting comment
+16:04:08-app.py-app-app: Getting comments
+16:06:39-app.py-app-app: Getting comments
+16:07:06-app.py-app-app: Posting comment
+16:07:08-app.py-app-app: Getting comments
+16:23:08-app.py-app-app: Posting comment
+16:23:11-app.py-app-app: Getting comments
+16:25:11-app.py-app-app: Getting comments
+16:25:35-app.py-app-app: Getting comments
+16:26:40-app.py-app-app: Getting comments
+16:27:54-app.py-app-app: Getting comments
+16:28:07-app.py-app-app: Getting comments
+16:29:04-app.py-app-app: Getting comments
+16:30:18-app.py-app-app: Getting comments
+16:31:58-app.py-app-app: Getting comments
+16:32:48-app.py-app-app: Getting comments
+16:33:42-app.py-app-app: Getting comments
+16:35:12-app.py-app-app: Getting comments
+17:14:59-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\__pycache__\\generator.cpython-37.pyc', reloading
+17:20:09-app.py-app-app: Getting comments
+17:20:17-app.py-app-app: Posting comment
+17:20:19-app.py-app-app: Getting comments
+18:28:15-app.py-app-app: Posting comment
+18:28:18-app.py-app-app: Getting comments
+18:29:23-app.py-app-app: Getting comments
+18:29:47-app.py-app-app: Posting comment
+18:29:49-app.py-app-app: Getting comments
+18:31:36-app.py-app-app: Getting comments
+18:32:12-app.py-app-app: Getting comments
+18:37:35-app.py-app-app: Getting comments
+18:37:55-app.py-app-app: Posting comment
+18:37:59-_internal.py-_internal-werkzeug:  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\jwt\\__pycache__\\exceptions.cpython-37.pyc', reloading
+18:38:04-app.py-app-app: Posting comment
+18:38:26-app.py-app-app: Getting comments
+18:38:49-app.py-app-app: Posting comment
+18:38:53-app.py-app-app: Posting comment
+18:40:04-app.py-app-app: Getting comments
+18:40:16-app.py-app-app: Posting comment
+18:40:24-app.py-app-app: Posting comment
+18:40:36-app.py-app-app: Getting comments
+18:40:43-app.py-app-app: Getting comments
+18:41:29-app.py-app-app: Posting comment
+18:41:31-app.py-app-app: Getting comments
+18:41:39-app.py-app-app: Getting comments
+18:41:59-app.py-app-app: Posting comment
+18:42:01-app.py-app-app: Getting comments
+18:42:06-app.py-app-app: Posting comment
+18:42:08-app.py-app-app: Getting comments
+18:42:13-app.py-app-app: Posting comment
+18:42:14-app.py-app-app: Getting comments
+18:42:21-app.py-app-app: Posting comment
+18:42:22-app.py-app-app: Getting comments
+18:43:28-app.py-app-app: Posting comment
+18:43:29-app.py-app-app: Getting comments

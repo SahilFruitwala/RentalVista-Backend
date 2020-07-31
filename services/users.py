@@ -1,4 +1,3 @@
-# Author: Sahil Fruitwala - B00844489
 from .token import encode_jwt, decode_jwt
 from flask import flash
 from json import dumps

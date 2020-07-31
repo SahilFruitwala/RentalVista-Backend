@@ -262,3 +262,147 @@
 13:27:02 INFO app Thread-6 : Start Logout Inner
 13:27:02 INFO app Thread-6 : End Logout Inner
 13:27:02 INFO app Thread-6 : End Logout
+15:58:41 INFO app Thread-6 : Authenticating User
+15:58:41 INFO app Thread-6 : Exception Occurred in Token Validation
+16:18:26 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\mime\\__pycache__\\nonmultipart.cpython-37.pyc', reloading
+16:53:06 INFO app Thread-8 : Getting comments
+17:17:21 INFO app Thread-7 : Getting comments
+17:17:55 INFO app Thread-8 : Posting comment
+17:18:42 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\network.cpython-37.pyc', reloading
+17:19:58 INFO app Thread-6 : Posting comment
+17:21:03 INFO app Thread-6 : Posting comment
+18:38:30 INFO app Thread-7 : Editing comments
+18:39:15 INFO werkzeug Thread-3 :  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\services\\__pycache__\\users.cpython-37.pyc', reloading
+18:51:13 INFO app Thread-6 : Editing comments
+18:51:58 INFO app Thread-6 : Editing comments
+18:52:14 INFO app Thread-7 : Editing comments
+18:52:30 INFO app Thread-8 : Editing comments
+19:05:48 INFO app Thread-6 : Deleting comments
+19:07:34 INFO app Thread-7 : Editing comments
+19:08:36 INFO app Thread-8 : Deleting comments
+19:38:06 INFO werkzeug Thread-3 :  * Detected change in 'D:\\Term 3\\Web\\Group5_RentalVista_Backend-develop\\Group5_RentalVista_Backend\\env\\Lib\\site-packages\\click\\_unicodefun.py', reloading
+09:37:41 INFO app Thread-6 : Getting comments
+09:38:17 INFO app Thread-7 : Getting comments
+09:38:21 INFO app Thread-8 : Getting comments
+09:39:03 INFO app Thread-9 : Getting comments
+09:39:08 INFO app Thread-10 : Getting comments
+09:39:14 INFO app Thread-11 : Getting comments
+09:40:21 INFO app Thread-12 : Getting comments
+09:41:00 INFO app Thread-13 : Getting comments
+09:41:15 INFO app Thread-14 : Getting comments
+09:51:17 INFO app Thread-16 : Authenticating User
+09:51:17 INFO app Thread-16 : Exception Occurred in Token Validation
+09:52:03 INFO app Thread-18 : Authenticating User
+09:52:03 INFO app Thread-18 : Exception Occurred in Token Validation
+09:58:35 INFO app Thread-6 : Getting comments
+09:59:08 INFO app Thread-7 : Posting comment
+10:00:40 INFO app Thread-11 : Editing comments
+10:00:54 INFO app Thread-12 : Editing comments
+10:01:33 INFO app Thread-13 : Deleting comments
+10:02:29 INFO app Thread-6 : Getting comments
+10:03:34 INFO app Thread-7 : Getting comments
+11:22:53 INFO app Thread-8 : Getting comments
+11:25:01 INFO app Thread-9 : Getting comments
+11:25:22 INFO app Thread-10 : Getting comments
+11:25:53 INFO app Thread-11 : Getting comments
+19:52:16 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\dns\\__pycache__\\rdataclass.cpython-37.pyc', reloading
+19:52:54 INFO app Thread-6 : Getting comments
+19:53:06 INFO app Thread-7 : Getting comments
+19:53:23 INFO app Thread-8 : Posting comment
+19:53:44 INFO app Thread-9 : Getting comments
+19:55:42 INFO app Thread-10 : Getting comments
+19:55:50 INFO app Thread-11 : Getting comments
+19:58:30 INFO app Thread-12 : Getting comments
+19:59:23 INFO app Thread-13 : Getting comments
+20:00:45 INFO app Thread-6 : Getting comments
+20:05:59 INFO app Thread-7 : Getting comments
+20:06:21 INFO app Thread-8 : Getting comments
+20:09:33 INFO app Thread-9 : Getting comments
+20:10:06 INFO app Thread-10 : Getting comments
+11:54:41 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\__pycache__\\flask_bcrypt.cpython-37.pyc', reloading
+11:56:45 INFO app Thread-6 : Getting comments
+11:56:54 INFO app Thread-7 : Getting comments
+12:10:46 INFO app Thread-8 : Getting comments
+12:18:29 INFO app Thread-9 : Getting comments
+12:18:36 INFO app Thread-11 : Posting comment
+12:18:38 INFO app Thread-12 : Getting comments
+12:21:39 INFO app Thread-6 : Getting comments
+12:21:43 INFO app Thread-7 : Getting comments
+12:21:49 INFO app Thread-9 : Posting comment
+12:21:50 INFO app Thread-10 : Getting comments
+12:22:58 INFO app Thread-11 : Getting comments
+12:24:54 INFO app Thread-12 : Getting comments
+12:25:00 INFO app Thread-13 : Getting comments
+12:25:04 INFO app Thread-15 : Posting comment
+12:25:06 INFO app Thread-16 : Getting comments
+12:28:45 INFO app Thread-17 : Getting comments
+12:28:53 INFO app Thread-19 : Posting comment
+12:28:55 INFO app Thread-20 : Getting comments
+12:29:08 INFO app Thread-22 : Posting comment
+12:29:10 INFO app Thread-23 : Getting comments
+14:09:11 INFO app Thread-25 : Posting comment
+14:09:13 INFO app Thread-26 : Getting comments
+14:09:49 INFO app Thread-28 : Posting comment
+14:09:51 INFO app Thread-29 : Getting comments
+14:12:11 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\pymongo\\__pycache__\\server.cpython-37.pyc', reloading
+15:46:47 INFO app Thread-7 : Posting comment
+15:46:51 INFO app Thread-8 : Getting comments
+15:56:40 INFO app Thread-7 : Posting comment
+15:56:43 INFO app Thread-8 : Getting comments
+15:57:25 INFO app Thread-10 : Posting comment
+15:57:26 INFO app Thread-11 : Getting comments
+16:04:00 INFO app Thread-12 : Getting comments
+16:04:06 INFO app Thread-14 : Posting comment
+16:04:08 INFO app Thread-15 : Getting comments
+16:06:39 INFO app Thread-16 : Getting comments
+16:07:06 INFO app Thread-18 : Posting comment
+16:07:08 INFO app Thread-19 : Getting comments
+16:23:08 INFO app Thread-21 : Posting comment
+16:23:11 INFO app Thread-22 : Getting comments
+16:25:11 INFO app Thread-23 : Getting comments
+16:25:35 INFO app Thread-24 : Getting comments
+16:26:40 INFO app Thread-25 : Getting comments
+16:27:54 INFO app Thread-26 : Getting comments
+16:28:07 INFO app Thread-27 : Getting comments
+16:29:04 INFO app Thread-28 : Getting comments
+16:30:18 INFO app Thread-29 : Getting comments
+16:31:58 INFO app Thread-30 : Getting comments
+16:32:48 INFO app Thread-31 : Getting comments
+16:33:42 INFO app Thread-32 : Getting comments
+16:35:12 INFO app Thread-33 : Getting comments
+17:14:59 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\email\\__pycache__\\generator.cpython-37.pyc', reloading
+17:20:09 INFO app Thread-6 : Getting comments
+17:20:17 INFO app Thread-8 : Posting comment
+17:20:19 INFO app Thread-9 : Getting comments
+18:28:15 INFO app Thread-11 : Posting comment
+18:28:18 INFO app Thread-12 : Getting comments
+18:29:23 INFO app Thread-13 : Getting comments
+18:29:47 INFO app Thread-15 : Posting comment
+18:29:49 INFO app Thread-16 : Getting comments
+18:31:36 INFO app Thread-17 : Getting comments
+18:32:12 INFO app Thread-18 : Getting comments
+18:37:35 INFO app Thread-19 : Getting comments
+18:37:55 INFO app Thread-21 : Posting comment
+18:37:59 INFO werkzeug Thread-3 :  * Detected change in 'C:\\Users\\harsh\\anaconda3\\Lib\\site-packages\\jwt\\__pycache__\\exceptions.cpython-37.pyc', reloading
+18:38:04 INFO app Thread-7 : Posting comment
+18:38:26 INFO app Thread-6 : Getting comments
+18:38:49 INFO app Thread-8 : Posting comment
+18:38:53 INFO app Thread-9 : Posting comment
+18:40:04 INFO app Thread-11 : Getting comments
+18:40:16 INFO app Thread-13 : Posting comment
+18:40:24 INFO app Thread-15 : Posting comment
+18:40:36 INFO app Thread-16 : Getting comments
+18:40:43 INFO app Thread-17 : Getting comments
+18:41:29 INFO app Thread-19 : Posting comment
+18:41:31 INFO app Thread-21 : Getting comments
+18:41:39 INFO app Thread-23 : Getting comments
+18:41:59 INFO app Thread-25 : Posting comment
+18:42:01 INFO app Thread-26 : Getting comments
+18:42:06 INFO app Thread-28 : Posting comment
+18:42:08 INFO app Thread-29 : Getting comments
+18:42:13 INFO app Thread-31 : Posting comment
+18:42:14 INFO app Thread-32 : Getting comments
+18:42:21 INFO app Thread-34 : Posting comment
+18:42:22 INFO app Thread-35 : Getting comments
+18:43:28 INFO app Thread-37 : Posting comment
+18:43:29 INFO app Thread-38 : Getting comments
