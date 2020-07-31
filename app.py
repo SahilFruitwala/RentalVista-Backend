@@ -20,6 +20,7 @@ from services.users import register_user, login_user, forgot_password, change_pa
 from services.token import decode_jwt
 from services.appointment import book_appointment
 from services.post import add_post, get_rooms, delete_room
+from services.properties import get_all_properties
 
 listen = ['high', 'default', 'low']
 
@@ -419,7 +420,8 @@ def addcomment():
         database.comments.insert(
         {'id': str(id), 'comment': comment})
         return jsonify("Comment posted successfully!..")
-    
+
+#Author: Naitik Prajapti - B00856835
 @app.route("/api/getrooms", methods=["GET"])
 def getRoom():
     app.logger.info('Processing Get Rooms...')
