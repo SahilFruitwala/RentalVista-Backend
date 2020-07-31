@@ -425,6 +425,13 @@ def addcomment():
         database.comments.insert(
         {'id': str(id), 'comment': comment})
         return jsonify("Comment posted successfully!..")
+    
+@app.route("/api/getrooms", methods=["GET"])
+def getRoom():
+    app.logger.info('Processing Get Rooms...')
+    # Fetch Documents from collection rooms
+    properties = database.rooms
+    return get_all_properties(properties)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
