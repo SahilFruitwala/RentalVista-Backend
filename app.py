@@ -409,12 +409,10 @@ def getcomment():
 
 #Author: Harshitha M S - B00838019
 @app.route("/addcomment", methods=["POST"])
-@authentication
 def addcomment():
     app.logger.info("Posting comment")
     data = request.get_json()
     comment = data["comment"]
-    author = data["author"]
     if not data:
         err = {'ERROR': 'No data passed'}
         return jsonify(err)
@@ -427,47 +425,6 @@ def addcomment():
         database.comments.insert(
         {'id': str(id), 'comment': comment, 'author': author})
         return jsonify("Comment posted successfully!..")
-
-#Author: Harshitha M S - B00838019
-@app.route("/editcomment", methods=["PUT"]) 
-@authentication
-def editcomment():
-    app.logger.info("Editing comments")
-    data = request.get_json()
-    comment = data["comment"]
-    author = data["author"]
-    if not data:
-        err = {'ERROR': 'No data passed'}
-        return jsonify(err)
-    else:
-        if comment:
-            if database.comments.find_one({'author': author}):
-                database.comments.update_one({'author': author}, {
-                    "$set": {'comment': comment, 'author': author}})
-                return jsonify('Comment updated successfully!')
-            else:
-                return jsonify("Author not found")
-
-#Author: Harshitha M S - B00838019
-@app.route("/deletecomment", methods=["POST"])
-@authentication
-def deletecomment():
-    app.logger.info("Deleting comments")
-    data = request.get_json()
-    comment = data["comment"]
-    author = data["author"]
-    if not data:
-        err = {'ERROR': 'No data passed'}
-        return jsonify(err)
-    else:
-        lastid = database.comments.find().sort([("_id", -1)]).limit(1)
-        id = int(lastid[0]["id"]) + 1
-        if database.comments.find_one({'comment': comment}):
-            del_comment = database.comments.find_one({'comment': comment})
-            database.comments.delete_one(del_comment)
-            return jsonify("Comment deleted")
-        else:
-            return jsonify("Record not found!")
    
 
 if __name__ == '__main__':
