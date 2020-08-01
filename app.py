@@ -432,7 +432,6 @@ def getRoom():
 
 #Author: Naitik Prajapti - B00856835
 @app.route("/api/getimages", methods=["GET"])
-def getimages():
     app.logger.info('Processing Get Room Images...')
     # Fetch Documents from collection rooms
     properties = database.rooms
