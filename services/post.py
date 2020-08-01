@@ -17,7 +17,7 @@ def add_post(token: str, data, rooms) -> str:
     for item in data['images']:
         images.append(item['dataURL'])
     try:
-        rooms.insert({"userID" : ObjectId(token_data), "images": images, "title": data['headline'], "ratings": 4, "reviews": [], "description": data['detail'], "rent": data['rent'], "isPromoted": "false", "isPetAllowed": data['petFriendly'], "isFurnished": data['furnishing'], "Amenities": data['amenities'], "Location": data['location'], "Availability": data['date'], "Bedrooms": data['bedrooms'], "Bathrooms": data['bathrooms']})
+        rooms.insert({"userID" : ObjectId(token_data), "images": images, "title": data['headline'], "ratings": 4, "reviews": [], "description": data['detail'], "rent": data['rent'], "isPromoted": data['promoted'], "isPetAllowed": data['petFriendly'], "isFurnished": data['furnishing'], "Amenities": data['amenities'], "Location": data['location'], "Availability": data['date'], "Bedrooms": data['bedrooms'], "Bathrooms": data['bathrooms']})
         return dumps({"msg" : "Post added successfully!"}) , 200
     except Exception as e:
         return dumps({"msg" : 'Some internal error occurred while adding post!', "error": str(e)}), 500
