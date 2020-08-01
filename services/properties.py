@@ -9,7 +9,7 @@ def get_all_properties(properties):
             roomID = json.dumps(room['_id'],default=str)
             userID = json.dumps(room['userID'],default=str)
             description = room['description']
-            image = room['images'][0]
+            # image = room['images'][0]
             rating = room['ratings']
             isPromoted = room['isPromoted']
             isPetAllowed = room['isPetAllowed']
@@ -17,7 +17,6 @@ def get_all_properties(properties):
             dict_room = {
                 'roomID':roomID,
                 'userID':userID,
-                'image': image,
                 'rating': rating,
                 'isPromoted':isPromoted,
                 'rent': rent,

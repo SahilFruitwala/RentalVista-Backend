@@ -21,6 +21,7 @@ from services.token import decode_jwt
 from services.appointment import book_appointment
 from services.post import add_post, get_rooms, delete_room
 from services.properties import get_all_properties
+from services.property_images import get_all_property_images
 
 listen = ['high', 'default', 'low']
 
@@ -428,6 +429,14 @@ def getRoom():
     # Fetch Documents from collection rooms
     properties = database.rooms
     return get_all_properties(properties)
+
+#Author: Naitik Prajapti - B00856835
+@app.route("/api/getimages", methods=["GET"])
+def getimages():
+    app.logger.info('Processing Get Room Images...')
+    # Fetch Documents from collection rooms
+    properties = database.rooms
+    return get_all_property_images(properties)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
