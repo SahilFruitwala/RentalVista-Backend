@@ -407,3 +407,22 @@
 18:42:22 INFO app Thread-35 : Getting comments
 18:43:28 INFO app Thread-37 : Posting comment
 18:43:29 INFO app Thread-38 : Getting comments
+12:20:58 INFO app Thread-4 : Start Feedback
+12:22:04 INFO app Thread-6 : Start Feedback
+12:22:33 INFO app Thread-8 : Start Feedback
+12:46:57 INFO app Thread-4 : Start Feedback
+12:46:57 INFO app Thread-4 : Start Processing Feedback
+12:46:59 INFO app Thread-4 : End Processing Feedback
+12:46:59 INFO app Thread-4 : End Feedback
+12:47:14 INFO app Thread-6 : Start Feedback
+12:47:14 INFO app Thread-6 : Start Processing Feedback
+12:47:14 INFO app Thread-6 : End Processing Feedback
+12:47:14 INFO app Thread-6 : End Feedback
+12:49:45 INFO app Thread-4 : Start Feedback
+12:49:45 INFO app Thread-4 : Start Processing Feedback
+12:49:47 INFO app Thread-4 : End Processing Feedback
+12:49:47 INFO app Thread-4 : End Feedback
+14:18:51 INFO app Thread-4 : Start Feedback
+14:18:51 INFO app Thread-4 : Start Processing Feedback
+14:18:52 INFO app Thread-4 : End Processing Feedback
+14:18:53 INFO app Thread-4 : End Feedback
