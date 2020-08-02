@@ -16,6 +16,7 @@ from logging.config import fileConfig
 from json import dumps
 import base64
 
+from services.feedback import submit_feedback
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
 from services.appointment import book_appointment
@@ -428,6 +429,27 @@ def getRoom():
     # Fetch Documents from collection rooms
     properties = database.rooms
     return get_all_properties(properties)
+
+
+#Author: Sahil Fruitwala - B00844489
+@app.route("/feedback", methods=["POST"])
+def feedback():
+    app.logger.info('Start Feedback')
+    user = database.user
+    try:
+        data = request.json['data']
+        temp = data['name']
+    except:
+        data = request.json
+    app.logger.info('Start Processing Feedback')
+    feedback = database.feedback
+    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    res = submit_feedback(data['email'], data['message'], feedback, mail)
+    app.logger.info('End Processing Feedback')
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Feedback')
+    return response
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
