@@ -19,7 +19,7 @@ import base64
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
 from services.appointment import book_appointment
-from services.post import add_post, get_rooms, delete_room
+from services.post import add_post, get_rooms, delete_room, disable_room
 from services.properties import get_all_properties
 
 listen = ['high', 'default', 'low']
@@ -105,7 +105,7 @@ def signup():
     app.logger.info('End Signup')
     return response
 
-
+# Author: Gaurav Anand - B00832139
 @app.route("/post/add", methods=["POST"])
 def add_property():
     app.logger.info('Adding post')
@@ -122,7 +122,7 @@ def add_property():
     response.status_code = res[1]
     return response
 
-
+# Author: Gaurav Anand - B00832139
 @app.route("/post/get", methods=["GET"])
 def get_properties():
     app.logger.info('Getting all posts for user profile')
@@ -135,7 +135,29 @@ def get_properties():
     response.status_code = res[1]
     return response
 
+# Author: Gaurav Anand - B00832139
+@app.route("/post/update", methods=["POST"])
+def disable():
+    app.logger.info('Start Disabling Room')
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    app.logger.info('Start Disabling Room Inner')
+    res = disable_room(data['roomID'], data['disabled'], rooms)
 
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
+    app.logger.info('End Disabling Room Inner')
+
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Disabling Room')
+    return response
+
+# Author: Gaurav Anand - B00832139
 @app.route("/post/delete", methods=["DELETE"])
 def delete_property():
     app.logger.info("Deleting property")
