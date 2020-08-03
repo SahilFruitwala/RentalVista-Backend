@@ -15,6 +15,9 @@ def get_all_properties(properties):
             isPromoted = room['isPromoted']
             isPetAllowed = room['isPetAllowed']
             rent = room['rent']
+            date = room['Availability']
+            bedrooms = room['Bedrooms']
+            bathrooms = room['Bathrooms']
             dict_room = {
                 'roomID':roomID,
                 'userID':userID,
@@ -24,7 +27,10 @@ def get_all_properties(properties):
                 'rent': rent,
                 'disabled': disabled,
                 'description': description,
-                'isPetAllowed': isPetAllowed
+                'isPetAllowed': isPetAllowed,
+                'date': date,
+                'bedrooms': bedrooms,
+                'bathrooms': bathrooms
             }
             listofRooms.append(dict_room)
         #print(listofRooms)
