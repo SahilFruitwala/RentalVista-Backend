@@ -10,18 +10,15 @@ from flask import json, make_response, jsonify, request, Flask, Response
 
 
 def book_appointment(token: str, adata, appointment, rooms, user, mail):
-    try:
-        date = adata['date'] + ' Aug'
-        token_data = decode_jwt(token)
-        userdata = user.find({"_id": ObjectId(loads(token_data))})
-        ownerid = rooms.find({"_id":  ObjectId(adata['postid'])})
-        ownerid = ownerid['userID']
-        ownerdata = user.find({"_id": ObjectId(loads(ownerid))})
-        email1 = userdata['email']
-        email2 = ownerdata['email']
-        appointment.insert_one({"userid": ObjectId(token_data), "postid": adata['postid'], "date": date, "time": adata["time"], "email": email1,
-                                "owneremail": email2})
+    date = adata['date'] + ' Aug'
+    token_data = decode_jwt(token)
+    # userdata = user.find({"_id": ObjectId(token_data)})
 
+    try:
+        appointment.insert_one({"userid": ObjectId(token_data), "postid": adata['postid'], "date": date, "time": adata["time"], "email": adata['email'],
+                                "owneremail": adata['owneremail']})
+        email1 = adata['email']
+        email2 = adata['owneremail']
         time = adata['time']
         msg = Message('Appointment Booked', recipients=[email1, email2])
         msg.html = ('<h2>Appointment details</h2>'
