@@ -40,8 +40,7 @@ def get_appointments(token: str, appointment, mail):
             'postid': i['postid'],
             'date': i['date'],
             'time': i['time'],
-            'email': i['email'],
-            'owneremail': i['owneremail']
+            'email': i['email']
         }
         appointments_list.append(data)
         data = {}
@@ -60,10 +59,9 @@ def deleteAppointment(roomID: str, appointment, mail):
         adata = appointment.find_one(
             {"userid": ObjectId(loads(roomID))})
         email1 = adata['email']
-        email2 = adata['owneremail']
         time = adata['time']
         date = adata['date'] + ' Aug'
-        msg = Message('Appointment Cancelled', recipients=[email1, email2])
+        msg = Message('Appointment Cancelled', recipients=[email1])
         msg.html = ('<h2>Appointment details</h2>'
                     '<p>Your appointment is cancelled which is on <b>' +
                     date+' 2020 on '+time+' PM.</b></p>'
@@ -90,9 +88,8 @@ def rescheduleAppointment(token: str, adata, appointment,  mail):
         print(adata)
 
         email1 = adata['email']
-        email2 = adata['owneremail']
         time = adata['time']
-        msg = Message('Appointment Reschedule', recipients=[email1, email2])
+        msg = Message('Appointment Reschedule', recipients=[email1])
         msg.html = ('<h2>Appointment details</h2>'
                     '<p>Your appointment is rescheduled on <b>'+date+' 2020 on '+time+' PM.</b></p>'
                     '<p><i><b>Note:</b>If you want to cancel or reschedule the appointment please visit our website.</i></P>')
