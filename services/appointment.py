@@ -53,16 +53,18 @@ def get_appointments(token: str, appointment, mail):
     return response
 
 
-def deleteAppointment(roomID, appointment, mail) -> str:
+def deleteAppointment(roomID: str, appointment, mail):
     try:
+        print("room id -->", roomID)
+
         res = appointment.delete_one({"_id": ObjectId(loads(roomID))})
         adata = appointment.find_one(
-            {"userid": ObjectId(roomID)})
+            {"userid": ObjectId(loads(roomID))})
         email1 = adata['email']
         email2 = adata['owneremail']
         time = adata['time']
         date = adata['date'] + ' Aug'
-        msg = Message('Appointment Booked', recipients=[email1, email2])
+        msg = Message('Appointment Cancelled', recipients=[email1, email2])
         msg.html = ('<h2>Appointment details</h2>'
                     '<p>Your appointment is cancelled which is on <b>' +
                     date+' 2020 on '+time+' PM.</b></p>'
@@ -71,3 +73,31 @@ def deleteAppointment(roomID, appointment, mail) -> str:
         return dumps({"msg": "Appointment deleted successfully!"}), 200
     except Exception as e:
         return dumps({"msg": 'Some internal error occurred while deleting appointment!', "error": str(e)}), 500
+
+
+def rescheduleAppointment(token: str, adata, appointment,  mail):
+
+    try:
+        oid = adata['id']
+        print(oid)
+        oid = oid.replace("\"", "")
+        date = adata['date'] + " Aug"
+
+        myquery = {"_id": ObjectId(oid)}
+        newvalues = {"$set": {"date": date, "time": adata['time']}}
+        appointment.update_one(myquery, newvalues)
+        adata = list(appointment.find(myquery))
+
+        print(adata)
+
+        # email1 = adata['email']
+        # email2 = adata['owneremail']
+        # time = adata['time']
+        # msg = Message('Appointment Reschedule', recipients=[email1, email2])
+        # msg.html = ('<h2>Appointment details</h2>'
+        #             '<p>Your appointment is rescheduled on <b>'+date+' 2020 on '+time+' PM.</b></p>'
+        #             '<p><i><b>Note:</b>If you want to cancel or reschedule the appointment please visit our website.</i></P>')
+        # mail.send(msg)
+        return dumps({"msg": 'Appointment Booked'}), 200
+    except Exception as e:
+        return dumps({"msg": 'Some internal error occurred!', "error": str(e)}), 500
