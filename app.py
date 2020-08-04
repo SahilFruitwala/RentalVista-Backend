@@ -530,6 +530,7 @@ def feedback():
         temp = data['name']
     except:
         data = request.json
+    print(data)
     app.logger.info('Start Processing Feedback')
     feedback = database.feedback
     response = Response(headers=RESPONSE_HEADERS,

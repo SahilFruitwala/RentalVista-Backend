@@ -8,6 +8,7 @@ def submit_feedback(email: str, body: str, feedback, mail):
     try:
         feedback_id = feedback.insert_one({"email": email, "body": body, "feedback_time": str(datetime.now())}).inserted_id
     except Exception as e:
+        print('ERROR1: ', str(e))
         return dumps({"msg": 'Some internal error occurred!', "error": str(e)}), 500
     else:
         try:
@@ -21,4 +22,5 @@ def submit_feedback(email: str, body: str, feedback, mail):
             flash(f'Feedback confirmation sent to {email}.')
             return dumps({"msg": "Feedback Received!"}), 200
         except Exception as e:
+            print('ERROR2: ', str(e))
             return dumps({"msg": 'Some internal error occurred!', "error": str(e)}), 500
