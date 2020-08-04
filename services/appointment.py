@@ -15,8 +15,7 @@ def book_appointment(token: str, adata, appointment, rooms, user, mail):
     # userdata = user.find({"_id": ObjectId(token_data)})
 
     try:
-        appointment.insert_one({"userid": ObjectId(token_data), "postid": adata['postid'], "date": date, "time": adata["time"], "email": adata['email'],
-                                "owneremail": adata['owneremail']})
+        appointment.insert_one({"userid": ObjectId(token_data), "postid": adata['postid'], "date": date, "time": adata["time"], "email": adata['email']})
         email1 = adata['email']
         email2 = adata['owneremail']
         time = adata['time']
