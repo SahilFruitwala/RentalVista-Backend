@@ -86,18 +86,18 @@ def rescheduleAppointment(token: str, adata, appointment,  mail):
         myquery = {"_id": ObjectId(oid)}
         newvalues = {"$set": {"date": date, "time": adata['time']}}
         appointment.update_one(myquery, newvalues)
-        adata = list(appointment.find(myquery))
+        adata = appointment.find(myquery)
 
         print(adata)
 
-        # email1 = adata['email']
-        # email2 = adata['owneremail']
-        # time = adata['time']
-        # msg = Message('Appointment Reschedule', recipients=[email1, email2])
-        # msg.html = ('<h2>Appointment details</h2>'
-        #             '<p>Your appointment is rescheduled on <b>'+date+' 2020 on '+time+' PM.</b></p>'
-        #             '<p><i><b>Note:</b>If you want to cancel or reschedule the appointment please visit our website.</i></P>')
-        # mail.send(msg)
+        email1 = adata['email']
+        email2 = adata['owneremail']
+        time = adata['time']
+        msg = Message('Appointment Reschedule', recipients=[email1, email2])
+        msg.html = ('<h2>Appointment details</h2>'
+                    '<p>Your appointment is rescheduled on <b>'+date+' 2020 on '+time+' PM.</b></p>'
+                    '<p><i><b>Note:</b>If you want to cancel or reschedule the appointment please visit our website.</i></P>')
+        mail.send(msg)
         return dumps({"msg": 'Appointment Booked'}), 200
     except Exception as e:
         return dumps({"msg": 'Some internal error occurred!', "error": str(e)}), 500
