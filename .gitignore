@@ -35,3 +35,5 @@ Sahil_Fruitwala_B00844489.md
 API.log
 debug.log
 loop.log
+__pycache__
+*.log

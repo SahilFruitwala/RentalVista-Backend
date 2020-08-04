@@ -17,10 +17,15 @@ from json import dumps
 import base64
 
 from services.feedback import submit_feedback
+import json
+from bson.objectid import ObjectId
 from services.users import register_user, login_user, forgot_password, change_password, edit_profile, get_user_detail, logout_user
 from services.token import decode_jwt
-from services.appointment import book_appointment
-from services.post import add_post, get_rooms, delete_room
+
+from services.post import add_post, get_rooms, delete_room, disable_room
+
+from services.appointment import book_appointment, get_appointments, deleteAppointment, rescheduleAppointment
+
 from services.properties import get_all_properties
 
 listen = ['high', 'default', 'low']
@@ -51,7 +56,7 @@ CORS(app)
 bcrypt = Bcrypt(app)
 
 MONGODB_URI = os.environ.get('MONGODB_URI_PART1')
-client = MongoClient(MONGODB_URI + '&w=majority')
+client = MongoClient(MONGODB_URI)
 
 database = client.rentalvista
 
@@ -106,7 +111,7 @@ def signup():
     app.logger.info('End Signup')
     return response
 
-
+# Author: Gaurav Anand - B00832139
 @app.route("/post/add", methods=["POST"])
 def add_property():
     app.logger.info('Adding post')
@@ -123,7 +128,7 @@ def add_property():
     response.status_code = res[1]
     return response
 
-
+# Author: Gaurav Anand - B00832139
 @app.route("/post/get", methods=["GET"])
 def get_properties():
     app.logger.info('Getting all posts for user profile')
@@ -136,7 +141,29 @@ def get_properties():
     response.status_code = res[1]
     return response
 
+# Author: Gaurav Anand - B00832139
+@app.route("/post/update", methods=["POST"])
+def disable():
+    app.logger.info('Start Disabling Room')
+    token = request.headers['Authorization']
+    rooms = database.rooms
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    app.logger.info('Start Disabling Room Inner')
+    res = disable_room(data['roomID'], data['disabled'], rooms)
 
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
+    app.logger.info('End Disabling Room Inner')
+
+    response.data = res[0]
+    response.status_code = res[1]
+    app.logger.info('End Disabling Room')
+    return response
+
+# Author: Gaurav Anand - B00832139
 @app.route("/post/delete", methods=["DELETE"])
 def delete_property():
     app.logger.info("Deleting property")
@@ -284,15 +311,15 @@ def logout():
     app.logger.info('End Logout')
     return response
 
-#Author: Amogh Adithya Bangalore - B00833535   
+# Author: Amogh Adithya Bangalore - B00833535
 @app.route("/getblog", methods=["GET"])
 def getblog():
     blog_collection = database.blogs
     blog = blog_collection.find({}, {'_id': 0})
     blog_list = list(blog)
     return jsonify(blog_list)
-    
-#Author: Amogh Adithya Bangalore - B00833535      
+
+# Author: Amogh Adithya Bangalore - B00833535
 @app.route("/addblog", methods=["POST"])
 def addblog():
     get_user_data = request.get_json()
@@ -318,7 +345,7 @@ def addblog():
                 {'id': str(id), 'title': title, 'author': author, 'desc': desc})
             return jsonify("User added successfully!..")
 
-#Author: Amogh Adithya Bangalore - B00833535              
+# Author: Amogh Adithya Bangalore - B00833535
 @app.route("/deleteblog", methods=["POST"])
 def deleteblog():
     data = request.get_json()
@@ -340,8 +367,8 @@ def deleteblog():
         else:
             return jsonify("Record not found!")
 
-#Author: Amogh Adithya Bangalore - B00833535 
-@app.route("/editblog", methods=["PUT"]) 
+# Author: Amogh Adithya Bangalore - B00833535
+@app.route("/editblog", methods=["PUT"])
 def editblog():
     data = request.get_json()
     title = data["title"]
@@ -360,41 +387,62 @@ def editblog():
             else:
                 return jsonify("Author not found")
 
-#Author: Krupa Patel - B00828120
+# Author: Krupa Patel - B00828120
 @app.route("/appointment/book", methods=["POST"])
 def bookAppointment():
-    app.logger.info("Booking an Appointment")
+    token = request.json['headers']['Authorization']
     data = request.get_json()
-    # print(data)
+    print(data)
     appointment = database.appointment
+    user = database.users
     adata = data['data']
     print(adata)
-    res = book_appointment(adata, appointment)
+    res = book_appointment(token, adata, appointment, user, mail)
     response = Response(headers=RESPONSE_HEADERS,
                         content_type='application/json')
     return response
 
-#Author: Krupa Patel - B00828120
-@app.route('/myappointment/<userId>', methods=['GET'])
-def get_appointment(userId):
-    app.logger.info("Getting Appointment")
+# Author: Krupa Patel - B00828120
+@app.route('/myappointment/get', methods=["GET"])
+def get_appointment():
+
     appointment = database.appointment
-    data = appointment.find({"email": userId})
-    appointments = []
-    for i in data:
-        data = {
-            'postid': i['postid'],
-            'date': i['date'],
-            'time': i['time'],
-            'email': i['email'],
-            'owneremail': i['owneremail']
-        }
-        appointments.append(data)
-        data = {}
+    token = request.headers['Authorization']
+    res = get_appointments(token, appointment, mail)
 
-    return json.dumps(appointments), 200
+    return res
 
-#Author: Harshitha M S - B00838019
+
+@app.route('/appointment/delete', methods=["DELETE"])
+def delete_appointment():
+    try:
+        data = request.json['data']
+    except:
+        data = request.json
+    appointment = database.appointment
+    res = deleteAppointment(data['appointmentid'], appointment, mail)
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
+    response.data = res[0]
+    response.status_code = res[1]
+    return response
+
+
+@app.route('/appointment/reschedule', methods=['POST'])
+def reschduleAppointment():
+    token = request.json['headers']['Authorization']
+    data = request.get_json()
+
+    appointment = database.appointment
+    adata = data['data']
+
+    res = rescheduleAppointment(token, adata, appointment,  mail)
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
+    return response
+
+
+# Author: Harshitha M S - B00838019
 @app.route("/getcomment", methods=["GET"])
 def getcomment():
     app.logger.info("Getting comments")
@@ -403,7 +451,7 @@ def getcomment():
     comment_list = list(comment)
     return jsonify(comment_list)
 
-#Author: Harshitha M S - B00838019
+# Author: Harshitha M S - B00838019
 @app.route("/addcomment", methods=["POST"])
 def addcomment():
     app.logger.info("Posting comment")
@@ -419,10 +467,10 @@ def addcomment():
         else:
             id = 1
         database.comments.insert(
-        {'id': str(id), 'comment': comment})
+            {'id': str(id), 'comment': comment})
         return jsonify("Comment posted successfully!..")
 
-#Author: Naitik Prajapti - B00856835
+# Author: Naitik Prajapti - B00856835
 @app.route("/api/getrooms", methods=["GET"])
 def getRoom():
     app.logger.info('Processing Get Rooms...')
@@ -452,4 +500,4 @@ def feedback():
     return response
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='127.0.0.1', debug=True)

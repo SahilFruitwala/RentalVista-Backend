@@ -3,6 +3,7 @@ import jwt
 import datetime
 from os import environ
 
+
 def encode_jwt(user_id: str) -> bytes:
     """
     Generates the JWT
@@ -24,6 +25,7 @@ def encode_jwt(user_id: str) -> bytes:
     except Exception as e:
         return e
 
+
 def decode_jwt(auth_token: str) -> str:
     """
     Decodes the JWT
@@ -38,4 +40,3 @@ def decode_jwt(auth_token: str) -> str:
         return 'Signature expired. Please log in again.'
     except jwt.InvalidTokenError:
         return 'Invalid token. Please log in again.'
-

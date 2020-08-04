@@ -11,9 +11,13 @@ def get_all_properties(properties):
             description = room['description']
             image = room['images'][0]
             rating = room['ratings']
+            disabled = room['disabled']
             isPromoted = room['isPromoted']
             isPetAllowed = room['isPetAllowed']
             rent = room['rent']
+            date = room['Availability']
+            bedrooms = room['Bedrooms']
+            bathrooms = room['Bathrooms']
             dict_room = {
                 'roomID':roomID,
                 'userID':userID,
@@ -21,11 +25,15 @@ def get_all_properties(properties):
                 'rating': rating,
                 'isPromoted':isPromoted,
                 'rent': rent,
+                'disabled': disabled,
                 'description': description,
-                'isPetAllowed': isPetAllowed
+                'isPetAllowed': isPetAllowed,
+                'date': date,
+                'bedrooms': bedrooms,
+                'bathrooms': bathrooms
             }
             listofRooms.append(dict_room)
-        print(listofRooms)
+        #print(listofRooms)
         return jsonify({"Data":listofRooms,"Status":"Success"})
     except Exception as e:
         return jsonify({"msg" : 'Some internal error occurred!', "error": str(e)})
