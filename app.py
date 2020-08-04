@@ -61,6 +61,8 @@ client = MongoClient(MONGODB_URI)
 database = client.rentalvista
 
 # Author: Sahil Fruitwala - B00844489
+
+
 def authentication(auth):
     @wraps(auth)
     def token_auth(*args, **kwargs):
@@ -90,6 +92,8 @@ def authentication(auth):
     return token_auth
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/signup", methods=["POST"])
 def signup():
     app.logger.info('Start Signup')
@@ -112,6 +116,8 @@ def signup():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/add", methods=["POST"])
 def add_property():
     app.logger.info('Adding post')
@@ -129,6 +135,8 @@ def add_property():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/get", methods=["GET"])
 def get_properties():
     app.logger.info('Getting all posts for user profile')
@@ -142,6 +150,8 @@ def get_properties():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/update", methods=["POST"])
 def disable():
     app.logger.info('Start Disabling Room')
@@ -164,6 +174,8 @@ def disable():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/delete", methods=["DELETE"])
 def delete_property():
     app.logger.info("Deleting property")
@@ -181,6 +193,8 @@ def delete_property():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/login", methods=["POST"])
 def login():
     app.logger.info('Start Login')
@@ -203,6 +217,8 @@ def login():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/forgot", methods=["POST"])
 def forgot():
     app.logger.info('Start Forgot Password')
@@ -225,6 +241,8 @@ def forgot():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/change", methods=["POST"])
 @authentication
 def change():
@@ -250,6 +268,8 @@ def change():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/user", methods=["GET"])
 @authentication
 def user_detail():
@@ -268,6 +288,8 @@ def user_detail():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/edit", methods=["POST"])
 @authentication
 def edit():
@@ -292,6 +314,8 @@ def edit():
     return response
 
 # Author: Sahil Fruitwala - B00844489
+
+
 @app.route("/users/logout", methods=["GET"])
 @authentication
 def logout():
@@ -312,6 +336,8 @@ def logout():
     return response
 
 # Author: Amogh Adithya Bangalore - B00833535
+
+
 @app.route("/getblog", methods=["GET"])
 def getblog():
     blog_collection = database.blogs
@@ -320,6 +346,8 @@ def getblog():
     return jsonify(blog_list)
 
 # Author: Amogh Adithya Bangalore - B00833535
+
+
 @app.route("/addblog", methods=["POST"])
 def addblog():
     get_user_data = request.get_json()
@@ -346,6 +374,8 @@ def addblog():
             return jsonify("User added successfully!..")
 
 # Author: Amogh Adithya Bangalore - B00833535
+
+
 @app.route("/deleteblog", methods=["POST"])
 def deleteblog():
     data = request.get_json()
@@ -368,6 +398,8 @@ def deleteblog():
             return jsonify("Record not found!")
 
 # Author: Amogh Adithya Bangalore - B00833535
+
+
 @app.route("/editblog", methods=["PUT"])
 def editblog():
     data = request.get_json()
@@ -388,21 +420,26 @@ def editblog():
                 return jsonify("Author not found")
 
 # Author: Krupa Patel - B00828120
+
+
 @app.route("/appointment/book", methods=["POST"])
 def bookAppointment():
     token = request.json['headers']['Authorization']
     data = request.get_json()
     print(data)
     appointment = database.appointment
+    room = database.rooms
     user = database.users
     adata = data['data']
     print(adata)
-    res = book_appointment(token, adata, appointment, user, mail)
+    res = book_appointment(token, adata, appointment, room, user, mail)
     response = Response(headers=RESPONSE_HEADERS,
                         content_type='application/json')
     return response
 
 # Author: Krupa Patel - B00828120
+
+
 @app.route('/myappointment/get', methods=["GET"])
 def get_appointment():
 
@@ -452,6 +489,8 @@ def getcomment():
     return jsonify(comment_list)
 
 # Author: Harshitha M S - B00838019
+
+
 @app.route("/addcomment", methods=["POST"])
 def addcomment():
     app.logger.info("Posting comment")
@@ -471,6 +510,8 @@ def addcomment():
         return jsonify("Comment posted successfully!..")
 
 # Author: Naitik Prajapti - B00856835
+
+
 @app.route("/api/getrooms", methods=["GET"])
 def getRoom():
     app.logger.info('Processing Get Rooms...')
@@ -479,7 +520,7 @@ def getRoom():
     return get_all_properties(properties)
 
 
-#Author: Sahil Fruitwala - B00844489
+# Author: Sahil Fruitwala - B00844489
 @app.route("/feedback", methods=["POST"])
 def feedback():
     app.logger.info('Start Feedback')
@@ -491,13 +532,15 @@ def feedback():
         data = request.json
     app.logger.info('Start Processing Feedback')
     feedback = database.feedback
-    response = Response(headers=RESPONSE_HEADERS, content_type='application/json')
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
     res = submit_feedback(data['email'], data['message'], feedback, mail)
     app.logger.info('End Processing Feedback')
     response.data = res[0]
     response.status_code = res[1]
     app.logger.info('End Feedback')
     return response
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug=True)
