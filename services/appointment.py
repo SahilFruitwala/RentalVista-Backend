@@ -83,7 +83,7 @@ def rescheduleAppointment(token: str, adata, appointment,  mail):
         myquery = {"_id": ObjectId(oid)}
         newvalues = {"$set": {"date": date, "time": adata['time']}}
         appointment.update_one(myquery, newvalues)
-        adata = list(appointment.find(myquery))
+        adata = appointment.find(myquery)
 
         print(adata)
 
