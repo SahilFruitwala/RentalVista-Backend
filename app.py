@@ -22,7 +22,7 @@ from services.token import decode_jwt
 
 from services.post import add_post, get_rooms, delete_room, disable_room
 
-from services.appointment import book_appointment, get_appointments, deleteAppointment
+from services.appointment import book_appointment, get_appointments, deleteAppointment, rescheduleAppointment
 
 from services.properties import get_all_properties
 
@@ -114,6 +114,8 @@ def signup():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/add", methods=["POST"])
 def add_property():
     app.logger.info('Adding post')
@@ -131,6 +133,8 @@ def add_property():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/get", methods=["GET"])
 def get_properties():
     app.logger.info('Getting all posts for user profile')
@@ -144,6 +148,8 @@ def get_properties():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/update", methods=["POST"])
 def disable():
     app.logger.info('Start Disabling Room')
@@ -166,6 +172,8 @@ def disable():
     return response
 
 # Author: Gaurav Anand - B00832139
+
+
 @app.route("/post/delete", methods=["DELETE"])
 def delete_property():
     app.logger.info("Deleting property")
@@ -414,7 +422,6 @@ def editblog():
 
 @app.route("/appointment/book", methods=["POST"])
 def bookAppointment():
-    app.logger.info("Booking an Appointment")
     token = request.json['headers']['Authorization']
     data = request.get_json()
     print(data)
@@ -430,9 +437,9 @@ def bookAppointment():
 # Author: Krupa Patel - B00828120
 
 
-@app.route('/myappointment/get', methods=['GET'])
+@app.route('/myappointment/get', methods=["GET"])
 def get_appointment():
-    app.logger.info("Getting Appointment")
+
     appointment = database.appointment
     token = request.headers['Authorization']
     res = get_appointments(token, appointment, mail)
@@ -440,20 +447,32 @@ def get_appointment():
     return res
 
 
-@app.route('/appointment/delete', methods=['DELETE'])
+@app.route('/appointment/delete', methods=["DELETE"])
 def delete_appointment():
-    app.logger.info("Deleting property")
-    token = request.headers['Authorization']
-    appointment = database.appointment
     try:
         data = request.json['data']
     except:
         data = request.json
+    appointment = database.appointment
     res = deleteAppointment(data['appointmentid'], appointment, mail)
     response = Response(headers=RESPONSE_HEADERS,
                         content_type='application/json')
     response.data = res[0]
     response.status_code = res[1]
+    return response
+
+
+@app.route('/appointment/reschedule', methods=['POST'])
+def reschduleAppointment():
+    token = request.json['headers']['Authorization']
+    data = request.get_json()
+
+    appointment = database.appointment
+    adata = data['data']
+
+    res = rescheduleAppointment(token, adata, appointment,  mail)
+    response = Response(headers=RESPONSE_HEADERS,
+                        content_type='application/json')
     return response
 
 
@@ -501,4 +520,4 @@ def getRoom():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='127.0.0.1', debug=True)

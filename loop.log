@@ -1168,3 +1168,567 @@
 17:14:00 WARNING werkzeug MainThread :  * Debugger is active!
 17:14:00 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
 17:14:00 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:22:51 INFO werkzeug MainThread :  * Restarting with stat
+00:22:52 WARNING werkzeug MainThread :  * Debugger is active!
+00:22:52 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:22:52 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:23:54 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+00:23:54 INFO werkzeug MainThread :  * Restarting with stat
+00:23:55 WARNING werkzeug MainThread :  * Debugger is active!
+00:23:55 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:23:55 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:24:14 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+00:24:14 INFO werkzeug MainThread :  * Restarting with stat
+00:24:14 WARNING werkzeug MainThread :  * Debugger is active!
+00:24:14 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:24:14 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:24:49 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+00:24:49 INFO werkzeug MainThread :  * Restarting with stat
+00:24:50 WARNING werkzeug MainThread :  * Debugger is active!
+00:24:50 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:24:50 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:24:54 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+00:24:54 INFO werkzeug MainThread :  * Restarting with stat
+00:24:55 WARNING werkzeug MainThread :  * Debugger is active!
+00:24:55 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:24:55 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:24:58 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+00:24:58 INFO werkzeug MainThread :  * Restarting with stat
+00:24:59 WARNING werkzeug MainThread :  * Debugger is active!
+00:24:59 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:24:59 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:25:20 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+00:25:21 INFO werkzeug MainThread :  * Restarting with stat
+00:25:21 WARNING werkzeug MainThread :  * Debugger is active!
+00:25:21 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:25:21 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:26:33 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+00:26:33 INFO werkzeug MainThread :  * Restarting with stat
+00:26:33 WARNING werkzeug MainThread :  * Debugger is active!
+00:26:33 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+00:26:33 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+00:59:54 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 00:59:54] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+00:59:54 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 00:59:54] code 400, message Bad request version ("Ð©¸T'j\x05÷àâ»õ")
+00:59:54 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 00:59:54] code 400, message Bad request version ('¯OZM')
+00:59:54 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 00:59:54] code 400, message Bad request version ('Ú\x87#-ÿôrÅôL1}WW\x9ch')
+01:01:19 INFO werkzeug MainThread :  * Restarting with stat
+01:01:19 WARNING werkzeug MainThread :  * Debugger is active!
+01:01:19 INFO werkzeug MainThread :  * Debugger PIN: 240-321-878
+01:01:19 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:01:06 INFO werkzeug MainThread :  * Restarting with stat
+02:01:07 WARNING werkzeug MainThread :  * Debugger is active!
+02:01:07 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:01:07 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:05:11 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:05:11 INFO werkzeug MainThread :  * Restarting with stat
+02:05:12 WARNING werkzeug MainThread :  * Debugger is active!
+02:05:12 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:05:12 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:05:47 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:05:47] "[33mGET /appointment-reschedule/favicon/favicon-32x32.png HTTP/1.1[0m" 404 -
+02:05:47 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:05:47] "[33mGET /appointment-reschedule/favicon/favicon-16x16.png HTTP/1.1[0m" 404 -
+02:05:52 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:05:52] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+02:05:53 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:05:53] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Q')
+02:05:53 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:05:53] "[35m[1m  üQ[0m" HTTPStatus.BAD_REQUEST -
+02:05:53 ERROR werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 02:05:53] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¸\x04©[&dØFÃôùùz\x86\x19AQ÷\x8aq')
+02:05:53 ERROR werkzeug Thread-7 : 127.0.0.1 - - [04/Aug/2020 02:05:53] code 400, message Bad request version ('\x86lè\x00"**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:10:57 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:10:57 INFO werkzeug MainThread :  * Restarting with stat
+02:10:59 WARNING werkzeug MainThread :  * Debugger is active!
+02:10:59 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:10:59 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:16:29 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:16:29] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+02:16:29 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:16:29] code 400, message Bad request version ('Y\x973ÅXõÏÏ<ö\x93Q\x16\x17\x00')
+02:16:29 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:16:29] code 400, message Bad request version ('\x9an¨"å\x00"zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:16:29 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:16:29] code 400, message Bad request version ('â\x072±Sø\x04§Í\x88³þ\x1b\x96E\x00"\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:16:37 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:16:37 INFO werkzeug MainThread :  * Restarting with stat
+02:16:38 WARNING werkzeug MainThread :  * Debugger is active!
+02:16:39 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:16:39 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:16:58 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:16:58] code 400, message Bad request version ('a)\x86¶\x04\x8bËêÏà0¼')
+02:16:58 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:16:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ò¹ÔiÐ6\x8e¨ÛÒU>#{&B¡·Sú\x0erû°\x14uçàb\x8b=ï')
+02:16:59 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:16:59] code 400, message Bad request version ('\x9a¥2\x14fc\x00"\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:16:59 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:16:59] code 400, message Bad request version ('®\x19\x9b\x11&\x92+\x979vu@*Lf\x00"ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:18:39 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:18:39 INFO werkzeug MainThread :  * Restarting with stat
+02:18:40 WARNING werkzeug MainThread :  * Debugger is active!
+02:18:40 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:18:40 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:18:42 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:18:43 INFO werkzeug MainThread :  * Restarting with stat
+02:18:44 WARNING werkzeug MainThread :  * Debugger is active!
+02:18:44 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:18:44 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:19:14 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:19:14] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+02:19:14 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:19:14] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+02:19:15 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:19:15] code 400, message Bad request version ('Ü?Ï,F\x806IxÝ¼j@§\x8e\x11E\x86ý¥¹³à;eîP¯çòÄ\x8d\x00"::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:19:15 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:19:15] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\xad`\x94þ\x80\x87\x9e¥0ØFµ\x8d\x8d\x16@oÐOk\x10»Ê±ò¬R°ÂÑe\x99')
+02:21:41 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:21:41 INFO werkzeug MainThread :  * Restarting with stat
+02:21:42 WARNING werkzeug MainThread :  * Debugger is active!
+02:21:42 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:21:42 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:22:01 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:22:01] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9bG)§¯\x10X\x0e»Â\x16J12j')
+02:22:01 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:22:01] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+02:22:02 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:22:02] code 400, message Bad request version ('´:Í´\x14ë\x8c:Aê¤\x87ã\x06ÿ\x7fÒUl\x00"êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:22:02 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:22:02] code 400, message Bad request version ('¨PÑFÚ\x12¹z\'\x9d\x00"**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:22:59 INFO werkzeug MainThread :  * Restarting with stat
+02:23:00 WARNING werkzeug MainThread :  * Debugger is active!
+02:23:00 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:23:00 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:23:39 ERROR werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:23:39] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x07,w\x9a7Þ\x84éi')
+02:23:39 ERROR werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:23:39] code 400, message Bad request version ('´F<Î!')
+02:23:40 ERROR werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 02:23:40] code 400, message Bad request version ('²©\x8f¥\\\x91G_÷&-\x00"êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:23:40 ERROR werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 02:23:40] code 400, message Bad request version ('D<õSFø\x9e\x00"::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+02:24:41 INFO werkzeug MainThread :  * Restarting with stat
+02:24:42 WARNING werkzeug MainThread :  * Debugger is active!
+02:24:42 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:24:42 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:24:57 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:24:57] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:24:57 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:24:57] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:25:04 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:25:05 INFO werkzeug MainThread :  * Restarting with stat
+02:25:06 WARNING werkzeug MainThread :  * Debugger is active!
+02:25:06 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:25:06 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:25:09 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:25:09 INFO werkzeug MainThread :  * Restarting with stat
+02:25:10 WARNING werkzeug MainThread :  * Debugger is active!
+02:25:10 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:25:10 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:25:19 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:25:19] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:25:20 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:25:20] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:25:46 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:25:46 INFO werkzeug MainThread :  * Restarting with stat
+02:25:47 WARNING werkzeug MainThread :  * Debugger is active!
+02:25:47 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:25:47 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:25:58 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:25:58] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:25:58 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:25:58] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:26:16 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:26:16 INFO werkzeug MainThread :  * Restarting with stat
+02:26:17 WARNING werkzeug MainThread :  * Debugger is active!
+02:26:17 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:26:17 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:26:28 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:26:28] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:26:29 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:26:29] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:27:33 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:27:33 INFO werkzeug MainThread :  * Restarting with stat
+02:27:35 WARNING werkzeug MainThread :  * Debugger is active!
+02:27:35 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:27:35 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:31:47 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:31:47] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:31:48 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:31:48] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:33:04 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:33:05 INFO werkzeug MainThread :  * Restarting with stat
+02:33:05 WARNING werkzeug MainThread :  * Debugger is active!
+02:33:05 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:33:05 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:33:13 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:33:13] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:33:14 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:33:14] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:34:11 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:34:11 INFO werkzeug MainThread :  * Restarting with stat
+02:34:12 WARNING werkzeug MainThread :  * Debugger is active!
+02:34:12 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:34:12 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:34:22 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:34:22] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:34:22 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:34:22] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:34:47 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:34:47 INFO werkzeug MainThread :  * Restarting with stat
+02:34:48 WARNING werkzeug MainThread :  * Debugger is active!
+02:34:48 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:34:48 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:34:56 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:34:56] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:34:57 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:34:57] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:35:29 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:35:29 INFO werkzeug MainThread :  * Restarting with stat
+02:35:30 WARNING werkzeug MainThread :  * Debugger is active!
+02:35:30 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:35:30 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:35:42 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:35:42] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:35:43 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:35:43] "[35m[1mPUT /appointment/reschedule HTTP/1.1[0m" 500 -
+02:36:32 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:36:33 INFO werkzeug MainThread :  * Restarting with stat
+02:36:34 WARNING werkzeug MainThread :  * Debugger is active!
+02:36:34 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:36:34 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:39:08 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:39:08] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:39:08 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:39:08] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:40:54 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:40:54 INFO werkzeug MainThread :  * Restarting with stat
+02:40:55 WARNING werkzeug MainThread :  * Debugger is active!
+02:40:55 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:40:55 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:41:08 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:41:08] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:41:08 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:41:08] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:41:26 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:41:26 INFO werkzeug MainThread :  * Restarting with stat
+02:41:27 WARNING werkzeug MainThread :  * Debugger is active!
+02:41:27 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:41:27 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:41:33 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:41:33] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:41:34 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:41:34] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:42:20 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:42:21 INFO werkzeug MainThread :  * Restarting with stat
+02:42:21 WARNING werkzeug MainThread :  * Debugger is active!
+02:42:21 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:42:21 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:44:42 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:44:42 INFO werkzeug MainThread :  * Restarting with stat
+02:44:43 WARNING werkzeug MainThread :  * Debugger is active!
+02:44:43 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:44:43 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:46:28 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:46:29 INFO werkzeug MainThread :  * Restarting with stat
+02:46:30 WARNING werkzeug MainThread :  * Debugger is active!
+02:46:30 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:46:30 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:46:41 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:46:41 INFO werkzeug MainThread :  * Restarting with stat
+02:46:43 WARNING werkzeug MainThread :  * Debugger is active!
+02:46:43 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:46:43 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:46:54 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:46:54] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:46:54 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:46:54] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:47:23 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:47:24 INFO werkzeug MainThread :  * Restarting with stat
+02:47:24 WARNING werkzeug MainThread :  * Debugger is active!
+02:47:24 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:47:24 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:47:31 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:47:31] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:47:32 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:47:32] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:55:04 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:55:04 INFO werkzeug MainThread :  * Restarting with stat
+02:55:05 WARNING werkzeug MainThread :  * Debugger is active!
+02:55:05 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:55:05 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:55:32 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:55:33 INFO werkzeug MainThread :  * Restarting with stat
+02:55:33 WARNING werkzeug MainThread :  * Debugger is active!
+02:55:33 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:55:33 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:55:36 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:55:36 INFO werkzeug MainThread :  * Restarting with stat
+02:55:37 WARNING werkzeug MainThread :  * Debugger is active!
+02:55:37 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:55:37 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:55:49 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:55:50 INFO werkzeug MainThread :  * Restarting with stat
+02:55:50 WARNING werkzeug MainThread :  * Debugger is active!
+02:55:50 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:55:50 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:56:18 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:56:18 INFO werkzeug MainThread :  * Restarting with stat
+02:56:19 WARNING werkzeug MainThread :  * Debugger is active!
+02:56:19 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:56:19 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:56:27 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:56:27] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:56:27 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:56:27] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:56:54 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:56:55 INFO werkzeug MainThread :  * Restarting with stat
+02:56:55 WARNING werkzeug MainThread :  * Debugger is active!
+02:56:55 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:56:56 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:57:08 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:57:08] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:57:08 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:57:08] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:57:20 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:57:20 INFO werkzeug MainThread :  * Restarting with stat
+02:57:21 WARNING werkzeug MainThread :  * Debugger is active!
+02:57:21 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:57:21 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:57:30 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+02:57:30 INFO werkzeug MainThread :  * Restarting with stat
+02:57:31 WARNING werkzeug MainThread :  * Debugger is active!
+02:57:31 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:57:31 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:58:12 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:58:12 INFO werkzeug MainThread :  * Restarting with stat
+02:58:13 WARNING werkzeug MainThread :  * Debugger is active!
+02:58:13 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:58:13 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:58:28 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:58:28] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:58:28 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:58:28] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+02:58:40 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+02:58:40 INFO werkzeug MainThread :  * Restarting with stat
+02:58:41 WARNING werkzeug MainThread :  * Debugger is active!
+02:58:41 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+02:58:41 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+02:58:53 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 02:58:53] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+02:58:53 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 02:58:53] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:00:17 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:00:18 INFO werkzeug MainThread :  * Restarting with stat
+03:00:19 WARNING werkzeug MainThread :  * Debugger is active!
+03:00:19 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:00:19 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:00:33 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:00:33] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+03:00:33 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:00:33] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:01:15 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:01:16 INFO werkzeug MainThread :  * Restarting with stat
+03:01:16 WARNING werkzeug MainThread :  * Debugger is active!
+03:01:16 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:01:16 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:01:29 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:01:29] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+03:01:29 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:01:29] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:02:09 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:02:09 INFO werkzeug MainThread :  * Restarting with stat
+03:02:10 WARNING werkzeug MainThread :  * Debugger is active!
+03:02:10 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:02:10 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:02:14 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:02:15 INFO werkzeug MainThread :  * Restarting with stat
+03:02:16 WARNING werkzeug MainThread :  * Debugger is active!
+03:02:16 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:02:16 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:02:36 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:02:36] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+03:02:36 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:02:36] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:05:07 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:05:07 INFO werkzeug MainThread :  * Restarting with stat
+03:05:08 WARNING werkzeug MainThread :  * Debugger is active!
+03:05:08 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:05:08 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:06:43 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:06:43 INFO werkzeug MainThread :  * Restarting with stat
+03:06:44 WARNING werkzeug MainThread :  * Debugger is active!
+03:06:44 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:06:44 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:06:55 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:06:56 INFO werkzeug MainThread :  * Restarting with stat
+03:06:56 WARNING werkzeug MainThread :  * Debugger is active!
+03:06:56 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:06:56 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:07:10 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:07:10] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+03:07:10 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:07:10] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:08:42 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:08:43 INFO werkzeug MainThread :  * Restarting with stat
+03:08:43 WARNING werkzeug MainThread :  * Debugger is active!
+03:08:43 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:08:43 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:08:57 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:08:57] "[37mOPTIONS /appointment/reschedule HTTP/1.1[0m" 200 -
+03:08:57 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:08:57] "[37mPUT /appointment/reschedule HTTP/1.1[0m" 200 -
+03:10:40 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:10:40 INFO werkzeug MainThread :  * Restarting with stat
+03:10:41 WARNING werkzeug MainThread :  * Debugger is active!
+03:10:41 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:10:41 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:10:53 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:10:54 INFO werkzeug MainThread :  * Restarting with stat
+03:10:55 WARNING werkzeug MainThread :  * Debugger is active!
+03:10:55 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:10:55 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:12:33 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:12:33 INFO werkzeug MainThread :  * Restarting with stat
+03:12:34 WARNING werkzeug MainThread :  * Debugger is active!
+03:12:34 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:12:34 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:13:08 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+03:13:08 INFO werkzeug MainThread :  * Restarting with stat
+03:13:09 WARNING werkzeug MainThread :  * Debugger is active!
+03:13:09 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:13:09 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:13:19 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:13:19] "[33mGET /view-room/favicon/favicon-32x32.png HTTP/1.1[0m" 404 -
+03:13:19 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:13:19] "[33mGET /view-room/favicon/favicon-16x16.png HTTP/1.1[0m" 404 -
+03:14:28 INFO werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 03:14:28] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+03:14:28 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 03:14:28] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+03:14:51 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 03:14:51] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+03:14:51 INFO werkzeug Thread-7 : 127.0.0.1 - - [04/Aug/2020 03:14:51] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+03:19:46 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+03:19:46 INFO werkzeug MainThread :  * Restarting with stat
+03:19:47 WARNING werkzeug MainThread :  * Debugger is active!
+03:19:47 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+03:19:47 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+03:19:52 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 03:19:52] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+03:19:52 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 03:19:52] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:22:31 INFO werkzeug MainThread :  * Restarting with stat
+10:22:32 WARNING werkzeug MainThread :  * Debugger is active!
+10:22:32 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:22:32 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:29:42 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:29:42] "[37mOPTIONS /myappointment/get HTTP/1.1[0m" 200 -
+10:29:42 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:29:42] "[35m[1mGET /myappointment/get HTTP/1.1[0m" 500 -
+10:29:49 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 10:29:49] "[37mOPTIONS /myappointment/get HTTP/1.1[0m" 200 -
+10:29:50 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 10:29:50] "[35m[1mGET /myappointment/get HTTP/1.1[0m" 500 -
+10:31:47 INFO werkzeug Thread-8 : 127.0.0.1 - - [04/Aug/2020 10:31:47] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:31:48 INFO werkzeug Thread-9 : 127.0.0.1 - - [04/Aug/2020 10:31:48] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:31:50 INFO werkzeug Thread-10 : 127.0.0.1 - - [04/Aug/2020 10:31:50] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:33:01 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:33:02 INFO werkzeug MainThread :  * Restarting with stat
+10:33:03 WARNING werkzeug MainThread :  * Debugger is active!
+10:33:03 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:33:03 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:33:11 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:33:11 INFO werkzeug MainThread :  * Restarting with stat
+10:33:12 WARNING werkzeug MainThread :  * Debugger is active!
+10:33:13 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:33:13 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:33:50 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:33:51 INFO werkzeug MainThread :  * Restarting with stat
+10:33:51 WARNING werkzeug MainThread :  * Debugger is active!
+10:33:51 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:33:51 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:33:59 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:33:59 INFO werkzeug MainThread :  * Restarting with stat
+10:34:00 WARNING werkzeug MainThread :  * Debugger is active!
+10:34:00 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:34:00 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:34:25 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:34:25] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:34:25 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:34:25] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:42:42 INFO werkzeug MainThread :  * Restarting with stat
+10:42:43 WARNING werkzeug MainThread :  * Debugger is active!
+10:42:43 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:42:43 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:42:48 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:42:48] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:42:49 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:42:49] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:47:00 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+10:47:01 INFO werkzeug MainThread :  * Restarting with stat
+10:47:02 WARNING werkzeug MainThread :  * Debugger is active!
+10:47:02 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:47:02 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:47:08 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+10:47:08 INFO werkzeug MainThread :  * Restarting with stat
+10:47:09 WARNING werkzeug MainThread :  * Debugger is active!
+10:47:09 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:47:09 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:47:34 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+10:47:34 INFO werkzeug MainThread :  * Restarting with stat
+10:47:35 WARNING werkzeug MainThread :  * Debugger is active!
+10:47:35 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:47:35 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:47:46 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+10:47:46 INFO werkzeug MainThread :  * Restarting with stat
+10:47:47 WARNING werkzeug MainThread :  * Debugger is active!
+10:47:47 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:47:47 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:47:58 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:47:58] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:47:58 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:47:58] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:48:11 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 10:48:11] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:48:11 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 10:48:11] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:51:20 INFO werkzeug Thread-8 : 127.0.0.1 - - [04/Aug/2020 10:51:20] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:51:20 INFO werkzeug Thread-9 : 127.0.0.1 - - [04/Aug/2020 10:51:20] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+10:52:25 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:52:26 INFO werkzeug MainThread :  * Restarting with stat
+10:52:27 WARNING werkzeug MainThread :  * Debugger is active!
+10:52:27 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:52:27 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:52:29 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:52:29 INFO werkzeug MainThread :  * Restarting with stat
+10:52:31 WARNING werkzeug MainThread :  * Debugger is active!
+10:52:31 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:52:31 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:53:16 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:53:16] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:53:16 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:53:16] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+10:56:57 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+10:56:57 INFO werkzeug MainThread :  * Restarting with stat
+10:56:58 WARNING werkzeug MainThread :  * Debugger is active!
+10:56:58 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+10:56:58 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+10:57:26 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 10:57:26] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+10:57:26 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 10:57:26] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+11:00:30 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:00:30 INFO werkzeug MainThread :  * Restarting with stat
+11:00:32 WARNING werkzeug MainThread :  * Debugger is active!
+11:00:32 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:00:32 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:00:45 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:00:45] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:00:46 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:00:46] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+11:01:23 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:01:24 INFO werkzeug MainThread :  * Restarting with stat
+11:01:26 WARNING werkzeug MainThread :  * Debugger is active!
+11:01:26 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:01:26 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:01:43 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:01:43] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:01:43 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:01:43] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+11:03:41 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 11:03:41] "[33mGET /view-room/favicon/favicon-32x32.png HTTP/1.1[0m" 404 -
+11:03:41 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 11:03:41] "[33mGET /view-room/favicon/favicon-16x16.png HTTP/1.1[0m" 404 -
+11:03:58 INFO werkzeug Thread-7 : 127.0.0.1 - - [04/Aug/2020 11:03:58] "[37mOPTIONS /appointment/book HTTP/1.1[0m" 200 -
+11:03:58 INFO werkzeug Thread-8 : 127.0.0.1 - - [04/Aug/2020 11:03:58] "[35m[1mPOST /appointment/book HTTP/1.1[0m" 500 -
+11:05:49 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:05:49 INFO werkzeug MainThread :  * Restarting with stat
+11:05:50 WARNING werkzeug MainThread :  * Debugger is active!
+11:05:50 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:05:50 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:06:32 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:06:33 INFO werkzeug MainThread :  * Restarting with stat
+11:06:49 INFO werkzeug MainThread :  * Restarting with stat
+11:06:50 WARNING werkzeug MainThread :  * Debugger is active!
+11:06:50 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:06:50 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:07:25 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:07:25] "[37mOPTIONS /appointment/book HTTP/1.1[0m" 200 -
+11:07:25 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:07:25] "[35m[1mPOST /appointment/book HTTP/1.1[0m" 500 -
+11:15:23 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 11:15:23] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:15:24 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 11:15:24] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+11:16:23 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:16:23 INFO werkzeug MainThread :  * Restarting with stat
+11:16:25 WARNING werkzeug MainThread :  * Debugger is active!
+11:16:25 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:16:25 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:16:38 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:16:38] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:16:38 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:16:38] "[35m[1mPOST /appointment/delete HTTP/1.1[0m" 500 -
+11:19:22 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:19:23 INFO werkzeug MainThread :  * Restarting with stat
+11:19:24 WARNING werkzeug MainThread :  * Debugger is active!
+11:19:24 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:19:24 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:19:27 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:19:27 INFO werkzeug MainThread :  * Restarting with stat
+11:19:28 WARNING werkzeug MainThread :  * Debugger is active!
+11:19:28 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:19:28 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:19:45 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:19:46 INFO werkzeug MainThread :  * Restarting with stat
+11:19:47 WARNING werkzeug MainThread :  * Debugger is active!
+11:19:47 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:19:47 INFO werkzeug Thread-1 :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+11:20:47 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:20:47] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:20:47 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:20:47] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:21:45 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 11:21:45] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:21:45 INFO werkzeug Thread-6 : 127.0.0.1 - - [04/Aug/2020 11:21:45] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:22:19 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:22:20 INFO werkzeug MainThread :  * Restarting with stat
+11:22:21 WARNING werkzeug MainThread :  * Debugger is active!
+11:22:21 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:22:21 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:22:31 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:22:31] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:22:31 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:22:31] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:23:20 INFO werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 11:23:20] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:23:20 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 11:23:20] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:23:56 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:23:56 INFO werkzeug MainThread :  * Restarting with stat
+11:23:57 WARNING werkzeug MainThread :  * Debugger is active!
+11:23:57 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:23:57 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:24:01 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:24:01 INFO werkzeug MainThread :  * Restarting with stat
+11:24:02 WARNING werkzeug MainThread :  * Debugger is active!
+11:24:02 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:24:02 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:24:23 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:24:23 INFO werkzeug MainThread :  * Restarting with stat
+11:24:25 WARNING werkzeug MainThread :  * Debugger is active!
+11:24:25 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:24:25 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:24:27 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:24:27] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:24:27 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:24:27] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:25:08 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\app.py', reloading
+11:25:08 INFO werkzeug MainThread :  * Restarting with stat
+11:25:10 WARNING werkzeug MainThread :  * Debugger is active!
+11:25:10 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:25:10 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:27:02 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:27:02] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:27:02 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:27:02] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:29:33 INFO werkzeug Thread-4 : 127.0.0.1 - - [04/Aug/2020 11:29:33] "[37mOPTIONS /appointment/delete HTTP/1.1[0m" 200 -
+11:29:33 INFO werkzeug Thread-5 : 127.0.0.1 - - [04/Aug/2020 11:29:33] "[35m[1mDELETE /appointment/delete HTTP/1.1[0m" 500 -
+11:31:00 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:31:00 INFO werkzeug MainThread :  * Restarting with stat
+11:31:01 WARNING werkzeug MainThread :  * Debugger is active!
+11:31:01 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:31:01 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:34:51 INFO werkzeug MainThread :  * Detected change in 'C:\\SEM3\\WEB\\FINAL_PROJECT\\NEW_03_AUG\\Group5_RentalVista_Backend\\services\\appointment.py', reloading
+11:34:51 INFO werkzeug MainThread :  * Restarting with stat
+11:34:52 WARNING werkzeug MainThread :  * Debugger is active!
+11:34:52 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:34:52 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+11:36:50 INFO werkzeug Thread-2 : 127.0.0.1 - - [04/Aug/2020 11:36:50] "[37mOPTIONS /appointment/book HTTP/1.1[0m" 200 -
+11:36:50 INFO werkzeug Thread-3 : 127.0.0.1 - - [04/Aug/2020 11:36:50] "[35m[1mPOST /appointment/book HTTP/1.1[0m" 500 -
+11:39:52 INFO werkzeug MainThread :  * Restarting with stat
+11:39:53 WARNING werkzeug MainThread :  * Debugger is active!
+11:39:53 INFO werkzeug MainThread :  * Debugger PIN: 273-833-071
+11:39:53 INFO werkzeug Thread-1 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
