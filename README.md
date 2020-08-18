@@ -6,7 +6,7 @@ Date Modified: - July 20, 2020
 Group: 5
 ```
 
->Heroku Frontend Link: https://rentalvista.herokuapp.com/
+>Heroku Frontend Link: https://rentalvista.herokuapp.com/  
 >Heroku Back-end Link: https://rentalvista-api.herokuapp.com/
 
 
